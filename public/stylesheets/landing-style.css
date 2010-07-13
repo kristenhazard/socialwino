@@ -1,0 +1,299 @@
+/* @override 
+	http://localhost:3000/stylesheets/landing-style.css?1279043527
+	http://localhost:3000/stylesheets/landing-style.css?1279045049
+	http://localhost:3000/stylesheets/landing-style.css?1279047028
+	http://localhost:3000/stylesheets/scaffold.css?1279043180
+	http://localhost:3000/stylesheets/landing-style.css?1279048963
+	http://localhost:3000/stylesheets/landing-style.css?1279054799
+	http://localhost:3000/stylesheets/landing-style.css?1279055030
+	http://localhost:3000/stylesheets/landing-style.css?1279056054
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+body{
+ font-family:Arial, Tahoma, Verdana;
+ font-size:14px;
+ color:#000;
+ margin:0;
+ padding:0;
+ font-weight:normal;
+ background: #443826; 
+ }
+ 
+#wrap {
+ background:  url(../images/bg.jpg) repeat;
+ } 
+ 
+#main{
+ margin:0 auto;
+ padding:0;
+ width:710px;
+ text-align:center;
+ }
+ 
+
+h1,h2,h3,h4,h5,h6 {
+ color:#000;
+ font-weight:normal;
+ margin:0;
+ padding:0;
+ } 
+ 
+h1{
+ font-size:24px;
+ } 
+ 
+ 
+h2{
+ font-size:20px; 
+ } 
+ 
+h3{
+ font-size:16px; 
+ }
+ 
+h4{
+ font-size:13px; 
+ }
+ 
+h5{
+ font-size:10px; 
+ }
+  
+h6{
+ font-size:8px; 
+ } 
+   
+
+ 
+/*	General Links			*/
+
+a:link,a:active,a:visited,a:hover{
+ color: #917851;
+ outline: none; 
+ text-decoration:none;
+ }
+a:hover{
+ text-decoration:underline;
+ }
+ 
+ 
+/*	Header			*/ 
+
+#header {
+ width:710px;
+ height:110px;
+ position:relative;
+ top:50px;
+ }
+ 
+#header h1 {
+ background: url(../images/socialwino-logo.png) no-repeat;
+ width:710px;
+ height:150px;
+ text-indent:-9999em;
+ margin-left: 150px;
+}
+
+ 
+ 
+/*	Container			*/  
+
+#container {
+ position:relative;
+ top:20px;
+ }
+ 
+.info p{
+ font-size:34px;
+ margin:12px 0;
+ padding:12px 0;
+ }
+ 
+.info p b{
+ font-weight:bold;
+ } 
+ 
+p.small {
+ font-size:22px;
+ }
+ 
+ 
+.social {
+ position:relative;
+ top:15px;
+ height:70px;
+ margin-left: 289px;
+ } 
+ 
+.social ul {
+ list-style:none;
+ margin:0px;
+ padding:0px;
+ }
+ 
+.social ul li {
+ float:left;
+ }  
+ 
+.social img {
+ border:none;
+ }
+ 
+.social a{
+ display:block;
+ height:64px;
+ text-indent:-999em;
+ }
+ 
+.social a.blogger {
+ background:url(../images/1.png) no-repeat;
+ width:64px;
+} 
+
+.social a.del {
+ background:url(../images/2.png) no-repeat;
+ width:64px;
+}
+
+.social a.facebook {
+ background:url(../images/3.png) no-repeat;
+ width:64px;
+}
+
+.social a.rss {
+ background:url(../images/5.png) no-repeat;
+ width:64px;
+}
+
+.social a.cs {
+ background:url(../images/6.png) no-repeat;
+ width:64px;
+}
+
+.social a.su {
+ background:url(../images/8.png) no-repeat;
+ width:64px;
+}
+
+.social a.twit {
+ background:url(../images/4.png) no-repeat;
+ width:64px;
+} 
+
+.social a.tech {
+ background:url(../images/7.png) no-repeat;
+ width:64px;
+ }
+ 
+.social a:hover {
+ background-position: 0 -64px;
+ }    
+ 
+ 
+/*	Footer			*/  
+ 
+#footer {
+ background:#443826;
+ position:relative;
+ top:80px;
+ height:210px;
+ width:100%;
+ border-top:1px solid #e1d1a1;
+ }
+ 
+#footer h3 {
+ font-size:34px;
+ color:#917851;
+ font-weight:bold;
+ position:absolute;
+ top:15px;
+ left:30px;
+ width:120px;
+ } 
+ 
+.footerbg {
+ width:710px;
+ margin:0 auto;
+ height:210px;
+ }
+ 
+.subscribe {
+ position:relative;
+ top:45px;
+ }
+
+ 
+#form-email {
+ float:left;
+ width:530px;
+ padding:0px; 
+ margin:0;
+ position:absolute;
+ left:150px;
+}
+
+#form-email p { 
+ float:left;
+ }
+
+#form-email input {
+ border:none; background:none;
+ }
+ 
+#form-email input#prelaunch_signup_email {
+ height:46px; 
+ width:430px; 
+ color:#51432e;
+ font-size:20px; 
+ padding:18px 85px 0 15px;
+ background: #433726 url(../images/inputbg.png) no-repeat 0 0;
+ }
+ 
+#form-email input#prelaunch_signup_submit {
+ background: url(../images/inputsubmit.png) no-repeat; 
+ height:58px; 
+ width:77px;
+ position: relative;
+ left: 447px;
+ top: -59px;
+ }
+
+ul#prelaunch-signups {
+	list-style-type: none;
+	text-align: left;
+}
+
+div.prelaunch-errors {
+	padding: 3px;
+}
+ 
+#form-email input#prelaunch_signup_submit:hover { 
+cursor:pointer;
+}
+ 
+.subscribe p{
+ margin:0;
+ padding:0;
+ }
+ 
+.line {
+ position:relative;
+ top:150px;
+ width:100%;
+ height:2px;
+ margin:0px;
+ padding:0px;
+ background: url(../images/line.jpg);
+ }
+ 
+.copy {
+ position:relative;
+ top:170px;
+ text-align:center;
+ color:#000;
+ }
+
+ 

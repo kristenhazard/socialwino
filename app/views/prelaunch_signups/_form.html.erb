@@ -1,0 +1,25 @@
+<%= form_for(@prelaunch_signup) do |f| %>
+  <% if @prelaunch_signup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prelaunch_signup.errors.count, "error") %> prohibited this prelaunch_signup from being saved:</h2>
+
+      <ul>
+      <% @prelaunch_signup.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :winery %><br />
+    <%= f.check_box :winery %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

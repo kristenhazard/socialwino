@@ -1,4 +1,7 @@
 Socialwino::Application.routes.draw do |map|
+  root :to => "prelaunch_signups#new"
+  resources :prelaunch_signups
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
