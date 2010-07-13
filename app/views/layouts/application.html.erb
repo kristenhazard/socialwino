@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>socialwino</title>
+  <%= stylesheet_link_tag :all %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<%= yield %>
+
+<%= javascript_include_tag 'jquery/jquery-1.4.2.min' %>
+<%= javascript_include_tag :all, :cache => true %>
+</body>
+</html>
