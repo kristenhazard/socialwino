@@ -7,6 +7,8 @@
 	http://localhost:3000/stylesheets/landing-style.css?1279054799
 	http://localhost:3000/stylesheets/landing-style.css?1279055030
 	http://localhost:3000/stylesheets/landing-style.css?1279056054
+	http://localhost:3000/stylesheets/landing-style.css?1279058838
+	http://localhost:3000/stylesheets/landing-style.css?1279133230
 */
 
 @charset "utf-8";
@@ -111,6 +113,14 @@ a:hover{
  margin:12px 0;
  padding:12px 0;
  }
+ 
+ .info-lp p{
+ font-size: 33px;
+ padding: 10px 50px;
+ }
+
+div.info-lp {
+}
  
 .info p b{
  font-weight:bold;
