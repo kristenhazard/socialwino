@@ -1,0 +1,284 @@
+/* @override 
+	http://localhost:3000/stylesheets/socialwino.css?1279225796
+	http://localhost:3000/stylesheets/socialwino.css?1279227161
+	http://localhost:3000/stylesheets/socialwino.css?1279231643
+	http://localhost:3000/stylesheets/socialwino.css?1279232129
+	http://localhost:3000/stylesheets/socialwino.css?1279232551
+	http://localhost:3000/stylesheets/socialwino.css?1279233573
+	http://localhost:3000/stylesheets/socialwino.css?1279235592
+	http://localhost:3000/stylesheets/socialwino.css?1279235904
+*/
+
+/* from baked cookies color palette
+lemon twist #87A53B
+decorative dish #BECC75
+cheese cake icing #FDFFE4
+a foamy meringue #FBFCF3
+burnt parts #6B533D
+*/
+
+/* from landing page
+#917851 almost beige, light brown
+#443826 brown a little darker
+#51432e brown a little lighter
+#433726 brown
+*/
+
+/* from forrst
+#EDE9DC - off white
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	line-height: 1;
+}
+
+body,form fieldset .field,button.swanky,.faux.field,input#short-url,#qball,#peoplesearch {
+	color: #1a1a1a;
+	font: normal normal 13px/18px "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+	text-shadow: 0 0 1px rgba(0,0,0,0.01);
+}
+
+body {
+	text-align: center;
+	background: #FBFCF3;
+	height: 100%;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+ul {
+	display: block;
+}
+
+ul li {
+	float: left;
+	margin-right: 15px;
+}
+
+div#wrapper {
+	min-width: 960px;
+}
+
+div#header-shell {
+	height: 59px;
+	background-color: #6B533D;
+	color: white;
+}
+
+div.shell div.inner {
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+ul#user-bar {
+	float: right;
+	padding-top: 24px;
+}
+
+#nav-shell {
+	background: #87A53B;
+	color: #292116;
+	height: 41px;
+}
+
+a#logo {
+	width: 205px;
+	height: 50px;
+	text-indent: -1000em;
+	display: block;
+	float: left;
+	background: url(../images/socialwino-logo-header.png) no-repeat left;
+	margin-top: 4px;
+}
+
+div#content-col,div#sidebar {
+	float: left;
+}
+
+#content-shell {
+	margin-top: 20px;
+}
+
+#content-panel {
+	width: 711px;
+}
+
+#content-panel .top {
+	background: #FDFFE4;
+	position: relative;
+	padding: 22px 20px 0;
+	height: 83px;
+}
+
+#content-panel .body {
+	background: #FDFFE4;
+	padding: 3px 17px 14px;
+}
+
+#content-panel .body.no-pad {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+#content-panel .bottom {
+	background: #FDFFE4;
+	height: 6px;
+}
+
+#content-panel {
+	width: 711px;
+}
+
+#content-panel h1,#neat-panel h2 {
+	text-shadow: 0 1px 0 rgba(255,255,255,1);
+}
+
+#content-panel h1 em,h1.mega em {
+	font-style: normal;
+	color: #444;
+}
+
+#content-panel h1,h1.mega,#neat-panel h1 a {
+	color: #27211a;
+	font-size: 32px;
+	letter-spacing: -0.6px;
+	margin-top: 1px;
+}
+
+#content-panel h1 a:hover {
+	color: #6c6c6a;
+}
+
+#content-panel h2,h2.kinda-mega {
+	color: #6a5c49;
+	font-size: 14px;
+	font-weight: normal;
+	margin-top: 10px;
+}
+
+form .textfield {
+	font-size: 18px;
+	border: 1px solid #dfdacb;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	width: 300px;
+}
+
+label {
+	font-size: 18px;
+}
+
+/* from rails */
+
+pre {
+	background-color: #eee;
+	padding: 10px;
+	font-size: 11px;
+}
+
+a {
+	color: #000;
+}
+
+a:visited {
+	color: #666;
+}
+
+a:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+div.field, div.actions {
+	margin-bottom: 10px;
+}
+
+#notice {
+	color: green;
+}
+
+/*
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+*/
+
+#error_explanation {
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 0;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+	width: 100%;
+}
+
+#error_explanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 14px;
+	margin: -7px;
+	margin-bottom: 0px;
+	background-color: #c00;
+	color: #fff;
+}
+
+#error_explanation ul li {
+	font-size: 13px;
+	list-style: block;
+}
+
+#new_user ul {
+	list-style: none;
+	display: block;
+}
+
+#new_user ul li {
+	color: #6a5c49;
+	float: left;
+	margin-right: 200px;
+	margin-top: 3px;
+}
+
+#error-container {
+	margin-bottom: 30px;
+}
+
+input[type=submit] {
+	margin-top: 10px;
+	background: #917851;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6B533D), to(#51432e));
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 6px 20px;
+	height: 41px;
+	border: 1px solid #51432e;
+	color: #fff;
+	text-shadow: 1px 1px 1px #51432e;
+	font: 18px/28px Helvetica, Arial;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+input[type=submit]:hover {
+	background: #443826;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#433726), to(#51432e));
+}

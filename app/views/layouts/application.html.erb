@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>socialwino</title>
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'socialwino', 'mint-choc/jquery-ui-1.8.2.custom.css', '960grid' %>
   <%= csrf_meta_tag %>
   <%= javascript_include_tag 'jquery/jquery-1.4.2.min' %>
   <%= javascript_include_tag :all, :cache => true %>
@@ -21,8 +21,36 @@
   </script>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="wrapper">
+    <div id="header-shell" class="shell">
+      <div id="header" class="inner">
+        <a id="logo" href="/"></a>
+        <ul id="user-bar">
+          <li>kristenhazard</li>
+          <li>settings</li>
+          <li>log out</li>
+        </ul>
+      </div>
+    </div>
+    <div id="nav-shell" class="shell">
+      <div id="nav" class="inner">
+      </div>
+    </div>
+    <div id="subnav-shell" class="shell">
+      <div id="subnav" class="inner"></div>
+    </div>
+    <div id="content-shell" class="shell">
+      <div id="content" class="inner">
+        <div id="content-col">
+          <div id="content-panel">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-shell" class="shell">
+      <div id="footer" class="inner"></div>
+    </div>
+  </div>
 </body>
 </html>
