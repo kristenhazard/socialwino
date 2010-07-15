@@ -9,6 +9,7 @@ gem 'authlogic'
 
 group :development do
   gem "rspec-rails", ">= 2.0.0.beta.17"
+  gem "hirb"
 end
 
 group :test do
