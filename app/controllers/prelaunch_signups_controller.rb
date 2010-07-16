@@ -1,7 +1,9 @@
 class PrelaunchSignupsController < ApplicationController
+  
+  before_filter :require_logged_in, :except => [:new, :show]
+  
   layout "prelaunch_signup"
-  # GET /prelaunch_signups
-  # GET /prelaunch_signups.xml
+  
   def index
     @prelaunch_signups = PrelaunchSignup.all
 
@@ -11,8 +13,6 @@ class PrelaunchSignupsController < ApplicationController
     end
   end
 
-  # GET /prelaunch_signups/1
-  # GET /prelaunch_signups/1.xml
   def show
     @prelaunch_signup = PrelaunchSignup.find(params[:id])
 
@@ -22,8 +22,6 @@ class PrelaunchSignupsController < ApplicationController
     end
   end
 
-  # GET /prelaunch_signups/new
-  # GET /prelaunch_signups/new.xml
   def new
     @prelaunch_signup = PrelaunchSignup.new
 
@@ -33,13 +31,10 @@ class PrelaunchSignupsController < ApplicationController
     end
   end
 
-  # GET /prelaunch_signups/1/edit
   def edit
     @prelaunch_signup = PrelaunchSignup.find(params[:id])
   end
 
-  # POST /prelaunch_signups
-  # POST /prelaunch_signups.xml
   def create
     @prelaunch_signup = PrelaunchSignup.new(params[:prelaunch_signup])
 
@@ -54,8 +49,6 @@ class PrelaunchSignupsController < ApplicationController
     end
   end
 
-  # PUT /prelaunch_signups/1
-  # PUT /prelaunch_signups/1.xml
   def update
     @prelaunch_signup = PrelaunchSignup.find(params[:id])
 
@@ -70,8 +63,6 @@ class PrelaunchSignupsController < ApplicationController
     end
   end
 
-  # DELETE /prelaunch_signups/1
-  # DELETE /prelaunch_signups/1.xml
   def destroy
     @prelaunch_signup = PrelaunchSignup.find(params[:id])
     @prelaunch_signup.destroy

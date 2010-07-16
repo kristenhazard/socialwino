@@ -7,6 +7,7 @@
 	http://localhost:3000/stylesheets/socialwino.css?1279233573
 	http://localhost:3000/stylesheets/socialwino.css?1279235592
 	http://localhost:3000/stylesheets/socialwino.css?1279235904
+	http://localhost:3000/stylesheets/socialwino.css?1279236322
 */
 
 /* from baked cookies color palette
@@ -126,6 +127,11 @@ div#content-col,div#sidebar {
 #content-panel .body {
 	background: #FDFFE4;
 	padding: 3px 17px 14px;
+	font-size: 18px;
+}
+
+#content-panel div.body table tbody tr td, th {
+	padding: 5px;	
 }
 
 #content-panel .body.no-pad {

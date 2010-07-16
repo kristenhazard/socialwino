@@ -1,0 +1,36 @@
+<div class="top">
+  <h1>Login</h1>
+  <h2>welcome back socialwino</h2>
+</div>
+<div class="body">
+  <%= form_for(@user_session, :url => { :action => "create" }) do |f| %>
+    <% if @user_session.errors.any? %>
+    <div id="error-container">
+    <div class="ui-widget">
+      <div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+          <span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+          <%= pluralize(@user_session.errors.count, "error") %> prohibited this user from being saved:
+        <ul>
+        <% @user_session.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+    </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :username, "username or email" %><br />
+      <%= f.text_field :username, :class => "textfield" %>
+    </div>
+    <div class="field">
+      <%= f.label :password, "password" %><br />
+      <%= f.password_field :password, :class => "textfield" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "sign in" %>
+    </div>
+  <% end %>
+</div>
+<div class="bottom"></div>

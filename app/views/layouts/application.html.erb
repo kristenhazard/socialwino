@@ -41,6 +41,9 @@
     </div>
     <div id="content-shell" class="shell">
       <div id="content" class="inner">
+        <% flash.each do |key, msg| -%>
+          <%= content_tag :p, msg, :id => key -%>
+        <% end -%>
         <div id="content-col">
           <div id="content-panel">
             <%= yield %>

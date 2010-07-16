@@ -1,12 +1,13 @@
 Socialwino::Application.routes.draw do |map|
-  get "user_session/create"
 
-  get "user_session/destroy"
-
+  resources :user_sessions
   resources :users
-
-  root :to => "prelaunch_signups#new"
   resources :prelaunch_signups
+  
+  root :to => "prelaunch_signups#new"
+  
+  match 'login' => "user_sessions#new"
+  match 'logout' => "user_sessions#destroy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
