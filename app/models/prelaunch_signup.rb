@@ -1,4 +1,7 @@
 class PrelaunchSignup < ActiveRecord::Base
-  validates_presence_of :email, :on => :create, :message => "can't be blank"
-  validates_uniqueness_of :email, :on => :create, :message => "must be unique"
+  
+  validates :email, :presence => true, 
+                    :length => {:minimum => 3, :maximum => 254},
+                    :uniqueness => true,
+                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
 end
