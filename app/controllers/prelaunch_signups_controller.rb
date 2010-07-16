@@ -1,6 +1,6 @@
 class PrelaunchSignupsController < ApplicationController
   
-  before_filter :require_logged_in, :except => [:new, :show]
+  before_filter :require_logged_in, :except => [:new, :show, :create]
   
   layout "prelaunch_signup"
   
