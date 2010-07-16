@@ -4,8 +4,7 @@
   <title>socialwino</title>
   <%= stylesheet_link_tag 'socialwino', 'mint-choc/jquery-ui-1.8.2.custom.css', '960grid' %>
   <%= csrf_meta_tag %>
-  <%= javascript_include_tag 'jquery/jquery-1.4.2.min' %>
-  <%= javascript_include_tag :all, :cache => true %>
+  <%= javascript_include_tag 'rails.js', 'jquery/jquery-1.4.2.min.js', 'jquery/jquery-ui-1.8.2.custom.min.js', :cache => true %>
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
