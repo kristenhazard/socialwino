@@ -10,16 +10,19 @@ gem 'authlogic'
 group :development do
   gem "rspec-rails", ">= 2.0.0.beta.17"
   gem "hirb"
+  gem "annotate"
 end
 
 group :test do
 #  gem "rspec"
-  gem "rspec-rails",      ">= 2.0.0.beta.17"
+  gem "rspec-rails", ">= 2.0.0.beta.17"
   gem "machinist"
   gem "faker"
   gem "ZenTest"
   gem "autotest"
   gem "autotest-rails"
+  gem "autotest-fsevent"
+  gem "autotest-growl"
   gem "cucumber"
   gem "database_cleaner"
   gem "cucumber-rails"
