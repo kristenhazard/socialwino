@@ -1,3 +1,4 @@
+/* @override http://localhost:3000/stylesheets/landing-style.css?1279146352 */
 
 @charset "utf-8";
 /* CSS Document */
@@ -61,7 +62,7 @@ h6{
 /*	General Links			*/
 
 a:link,a:active,a:visited,a:hover{
- color: #917851;
+ color: #443826;
  outline: none; 
  text-decoration:none;
  }
