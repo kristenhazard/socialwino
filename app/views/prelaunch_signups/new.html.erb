@@ -1,22 +1,30 @@
 <div id="wrap">
   <div id="main">
-    <div class="centered">
-    </div>
     <div id="header">
-      <h1>socialwino</h1>
+      <h1>socialwino
+        
+        <div class="social">
+                  <ul>
+                      <li><a class="facebook" href="http://www.facebook.com/socialwino">Facebook</a></li>
+                      <li><a class="twit" href="http://twitter.com/socialwino">Twitter</a></li>
+                  </ul>                         
+        </div><!-- End Social --></h1>
+      
     </div><!-- End Header -->
        <div id="container">
               <div class="info-lp">
                 <p>Creating a community of social winos and winemakers around our glorious Central Coast wine region.</p>
-              </div><!-- End Info -->
-              <div class="social">
-                        <ul>
-                            <li><a class="facebook" href="http://www.facebook.com/socialwino">Facebook</a></li>
-                            <li><a class="twit" href="http://twitter.com/socialwino">Twitter</a></li>
-                        </ul>                         
-              </div><!-- End Social -->          
+              </div><!-- End Info -->    
+              <div class="winemaker">
+                <a class="large awesome wine">Social<br/><span class="boldw">Winemakers</span><br/>Click Here!</a>
+              </div> 
+              <div class="wino">
+                <a class="large awesome wine">Social<br/><span class="boldw">Winos</span><br/>Click Here!</a>
+              </div>
        </div><!-- End Container -->            
   </div><!-- End Main -->  
+  
+  <div class="clear"></div>
   <div id="footer">
          <div class="footerbg">
                 <div class="subscribe">
@@ -36,16 +44,19 @@
                           <% end %>
                         
                           <p>
-                          <%= f.text_field :email,:placeholder => "Enter your e-mail address to get updates" %>
+                          <%= f.text_field :email,:placeholder => "enter your e-mail address" %>
                           <%= f.submit "" %>
                           </p>
                         
                           <% end %>
                 </div><!-- End Subscribe -->
-                <div class="line">
-                </div><!-- End Line-->
+                <div class="clear"></div>
+                
+                <div class="clear"></div>
+                <div class="line"></div>
+                <div class="clear"></div>
                 <div class="copy">
-                          <p>Brought to you by the fine folks at <a href="http://suntouchersoftware.com">Suntoucher LLC</a>. © 2010 <a href="http://suntouchersoftware.com">Suntoucher LLC</a>. All rights reserved.</p>
+                          <p>socialwino is brought to you by the fine folks at <a href="http://suntouchersoftware.com">Suntoucher LLC</a>. © 2010 Suntoucher LLC. All rights reserved.</p>
                 </div><!-- End Copy -->
         </div><!-- End Footerbg -->       
   </div><!-- End Footer -->

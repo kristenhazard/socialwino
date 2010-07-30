@@ -1,0 +1,41 @@
+<div id="wrap">
+  <div id="main">
+    <div id="header">
+      <h1>socialwino</h1>
+    </div><!-- End Header -->
+    <div class="social">
+              <ul>
+                  <li><a class="facebook" href="http://www.facebook.com/socialwino">Facebook</a></li>
+                  <li><a class="twit" href="http://twitter.com/socialwino">Twitter</a></li>
+              </ul>                         
+    </div><!-- End Social -->
+    <div class="clear"></div>
+       <div id="container">
+              <div class="info-lp">
+                <p>Creating a community of social winos and winemakers around our glorious Central Coast wine region.</p>
+              </div><!-- End Info -->    
+              <div id="sign-up">
+                <div class="wino-button">
+                  <%= image_tag "glass-red.png", :title => "winemaker bottle", :class => "winemaker-bottle" %>
+                  winos
+                  <%= link_to 'sign up here', new_prelaunch_signup_path, :class => "large awesome wine" %>
+                </div>
+                <div class="winemaker-button">
+                  <%= image_tag "bottle.png", :title => "winemaker bottle", :class => "winemaker-bottle" %>
+                  winemakers
+                  <%= link_to 'sign up here', new_prelaunch_signup_path, :class => "large awesome wine" %>
+                </div>
+              </div>
+       </div><!-- End Container -->            
+  </div><!-- End Main -->  
+  
+  <div class="clear"></div>
+  <div id="footer">
+         <div class="footerbg">
+                <div class="clear"></div>
+                <div class="copy">
+                  <p>Socialwino is brought to you by the fine folks at <a href="http://suntouchersoftware.com">Suntoucher LLC</a>. © 2010 Suntoucher LLC. All rights reserved.</p>
+                </div><!-- End Copy -->
+        </div><!-- End Footerbg -->       
+  </div><!-- End Footer -->
+</div><!-- End Wrap -->

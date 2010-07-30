@@ -8,6 +8,7 @@
 	http://localhost:3000/stylesheets/socialwino.css?1279235592
 	http://localhost:3000/stylesheets/socialwino.css?1279235904
 	http://localhost:3000/stylesheets/socialwino.css?1279236322
+	http://localhost:3000/stylesheets/socialwino.css?1280265697
 */
 
 /* from baked cookies color palette
@@ -23,6 +24,10 @@ burnt parts #6B533D
 #443826 brown a little darker
 #51432e brown a little lighter
 #433726 brown
+*/
+
+/* from landing page light brown from photoshop
+#ad9969
 */
 
 /* from forrst
@@ -142,10 +147,6 @@ div#content-col,div#sidebar {
 #content-panel .bottom {
 	background: #FDFFE4;
 	height: 6px;
-}
-
-#content-panel {
-	width: 711px;
 }
 
 #content-panel h1,#neat-panel h2 {
@@ -288,3 +289,4 @@ input[type=submit]:hover {
 	background: #443826;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#433726), to(#51432e));
 }
+

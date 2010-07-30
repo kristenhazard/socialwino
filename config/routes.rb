@@ -4,7 +4,7 @@ Socialwino::Application.routes.draw do |map|
   resources :users
   resources :prelaunch_signups
   
-  root :to => "prelaunch_signups#new"
+  root :to => "prelaunch_signups#landing"
   
   match 'login' => "user_sessions#new"
   match 'logout' => "user_sessions#destroy"

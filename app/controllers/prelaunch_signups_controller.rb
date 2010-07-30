@@ -1,6 +1,6 @@
 class PrelaunchSignupsController < ApplicationController
   
-  before_filter :require_logged_in, :except => [:new, :show, :create]
+  before_filter :require_logged_in, :except => [:new, :show, :create, :landing]
   
   layout "prelaunch_signup"
   
@@ -11,6 +11,10 @@ class PrelaunchSignupsController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @prelaunch_signups }
     end
+  end
+  
+  def landing
+
   end
 
   def show
