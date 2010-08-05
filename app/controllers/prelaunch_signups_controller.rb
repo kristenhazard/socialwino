@@ -1,8 +1,13 @@
 class PrelaunchSignupsController < ApplicationController
   
-  before_filter :require_logged_in, :except => [:new, :show, :create, :landing]
+  before_filter :require_logged_in, :only => [:index, :destroy]
   
   layout "prelaunch_signup"
+  
+  def winemaker
+    @prelaunch_signup = PrelaunchSignup.new
+  end
+
   
   def index
     @prelaunch_signups = PrelaunchSignup.all
@@ -28,11 +33,6 @@ class PrelaunchSignupsController < ApplicationController
 
   def new
     @prelaunch_signup = PrelaunchSignup.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @prelaunch_signup }
-    end
   end
 
   def edit

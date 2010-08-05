@@ -2,7 +2,11 @@ Socialwino::Application.routes.draw do |map|
 
   resources :user_sessions
   resources :users
-  resources :prelaunch_signups
+  resources :prelaunch_signups do
+    new do
+      get :winemaker
+    end
+  end
   
   root :to => "prelaunch_signups#landing"
   

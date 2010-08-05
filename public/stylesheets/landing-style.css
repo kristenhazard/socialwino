@@ -12,6 +12,7 @@
 	http://localhost:3000/stylesheets/landing-style.css?1280280664
 	http://localhost:3000/stylesheets/landing-style.css?1280444511
 	http://localhost:3000/stylesheets/landing-style.css?1280454102
+	http://localhost:3000/stylesheets/landing-style.css?1280454582
 */
 
 @charset "utf-8";
@@ -240,6 +241,7 @@ p.small {
 .subscribe {
 	position: relative;
 	top: 35px;
+	height: 300px;
 }
 
 #form-email {
