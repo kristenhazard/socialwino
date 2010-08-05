@@ -1,30 +1,13 @@
-<div class="container_12">
-  <div id="wrap">
-    <div id="main">
-      <div class="centered">
-      </div>
-      <div id="header">
-        <h1>socialwino</h1>
-      </div><!-- End Header -->
-         <div id="container"> 
-          <p id="notice"><%= notice %></p>
-          <div class="info">
-            <%= render 'form' %>
-            <%= link_to 'Show', @prelaunch_signup %> |
-            <%= link_to 'Back', prelaunch_signups_path %>
-            <%= button_to '[delete]', @prelaunch_signup, :confirm => 'Are you sure?', :method => :delete %>
-          </div><!-- End Info -->
-        </div><!-- container -->
-    </div><!-- main -->
-    <div id="footer">
-       <div class="footerbg">
-         <div class="copy">
-                   <p>Brought to you by the fine folks at <a href="http://suntouchersoftware.com">Suntoucher LLC</a>. © 2010 <a href="http://suntouchersoftware.com">Suntoucher LLC</a>. All rights reserved.</p>
-         </div><!-- End Copy -->
-       </div><!-- End Footerbg -->       
-     </div><!-- End Footer -->
-   </div><!-- wrap -->
-</div><!-- container_12 -->
+<div id="container"> 
+  <p id="notice"><%= notice %></p>
+  <div class="info">
+    <%= render 'form' %>
+    <%= link_to 'Show', @prelaunch_signup %> |
+    <%= link_to 'Back', prelaunch_signups_path %>
+    <%= button_to '[delete]', @prelaunch_signup, :confirm => 'Are you sure?', :method => :delete %>
+  </div><!-- End Info -->
+</div><!-- container -->
+
 
 
 

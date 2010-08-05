@@ -21,8 +21,32 @@
   </script>
 </head>
 <body>
+  <div id="wrap">
+    <div id="main">
+      <div id="header">
+        <h1>socialwino</h1>
+      </div><!-- End Header -->
+      <div class="social">
+                <ul>
+                    <li><a class="facebook" href="http://www.facebook.com/socialwino">Facebook</a></li>
+                    <li><a class="twit" href="http://twitter.com/socialwino">Twitter</a></li>
+                </ul>                         
+      </div><!-- End Social -->
+      <div class="clear"></div>
+      
+      <%= yield %>
 
-<%= yield %>
+    </div><!-- End Main -->  
+    <div class="clear"></div>
+    <div id="footer">
+           <div class="footerbg">
+                  <div class="clear"></div>
+                  <div class="copy">
+                    <p>Socialwino is brought to you by the fine folks at <a href="http://suntouchersoftware.com">Suntoucher LLC</a>. © 2010 Suntoucher LLC. All rights reserved.</p>
+                  </div><!-- End Copy -->
+          </div><!-- End Footerbg -->       
+    </div><!-- End Footer -->
+    </div><!-- End Wrap -->
 
 </body>
 </html>
