@@ -13,6 +13,13 @@
 	http://localhost:3000/stylesheets/landing-style.css?1280444511
 	http://localhost:3000/stylesheets/landing-style.css?1280454102
 	http://localhost:3000/stylesheets/landing-style.css?1280454582
+	http://localhost:3000/stylesheets/landing-style.css?1280455219
+	http://localhost:3000/stylesheets/landing-style.css?1281478270
+	http://localhost:3000/stylesheets/landing-style.css?1281479183
+	http://localhost:3000/stylesheets/landing-style.css?1281479799
+	http://localhost:3000/stylesheets/landing-style.css?1281480453
+	http://localhost:3000/stylesheets/landing-style.css?1281480638
+	http://localhost:3000/stylesheets/landing-style.css?1281480793
 */
 
 @charset "utf-8";
@@ -30,7 +37,7 @@ brown #664429
 body {
 	font-family: Verdana, Tahoma, Arial;
 	font-size: 14px;
-	color: #433726;
+	color: black;
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
@@ -45,7 +52,6 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	width: 910px;
-	text-align: center;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -102,6 +108,11 @@ a:hover {
 	float: left;
 	position: relative;
 	top: 50px;
+	margin-bottom: 50px;
+}
+
+#header a {
+	margin-left: 50px;
 }
 
 #header h1 {
@@ -276,8 +287,8 @@ p.small {
 	height: 58px;
 	width: 77px;
 	position: relative;
-	left: 387px;
-	top: -59px;
+	left: 388px;
+	top: -60px;
 }
 
 ul#prelaunch-signups {
@@ -319,6 +330,7 @@ div.prelaunch-errors {
 div#sign-up {
 	height: 200px;
 	margin-top: -20px;	
+	text-align: center;
 }
 
 div.winemaker-button {
@@ -469,3 +481,18 @@ span.winemaker-bold {
 .yellow.awesome:hover {
 	background-color: #fc9200;
 }
+
+div#pitch {
+	margin-top: 25px;
+	font-size: 190%;
+	text-align: left;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+
+div#questions {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-weight: bold;
+}
+

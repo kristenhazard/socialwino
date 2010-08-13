@@ -1,6 +1,8 @@
 <div id="container">
+  <div>
+    
+  </div>
   <div class="subscribe">
-    <h3>Join Us</h3>
     <%= form_for(@prelaunch_signup, :html => { :id => "form-email" }) do |f| %>
     <% if @prelaunch_signup.errors.any? %>
     <div class="prelaunch-errors">
@@ -16,7 +18,7 @@
     <% end %>
 
     <p>
-    <%= f.text_field :email,:placeholder => "enter your e-mail address" %>
+    <%= f.text_field :email,:placeholder => "winos enter e-mail address" %>
     <%= f.submit "" %>
     </p>
 

@@ -1,6 +1,20 @@
 <div id="container">
+  <div id="pitch">
+    <div id="facts">
+      <p>Over 1 million visitors come to the Central Coast annually.</p>
+      <p>There are over 200 wineries in our wine region.</p>
+    </div>
+    <div id="questions">
+      <p>How do you get those vistors to your tasting room?</p>
+      <p>How do you get them to share their experience?</p>
+      <p>How do you stay engaged so they keep buying wine and influencing others to buy your wine?</p>
+    </div>
+    <div id="answer">
+      <p>Join socialwino as a verified winery and use our socialwinemaker 
+         tools to do all that and more!</p>
+    </div>
+  </div>
   <div class="subscribe">
-     <h3>Join Us</h3>
      <%= form_for(@prelaunch_signup, :html => { :id => "form-email" }) do |f| %>
      <% if @prelaunch_signup.errors.any? %>
      <div class="prelaunch-errors">
