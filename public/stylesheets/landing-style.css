@@ -20,6 +20,18 @@
 	http://localhost:3000/stylesheets/landing-style.css?1281480453
 	http://localhost:3000/stylesheets/landing-style.css?1281480638
 	http://localhost:3000/stylesheets/landing-style.css?1281480793
+	http://localhost:3000/stylesheets/landing-style.css?1281480868
+	http://localhost:3000/stylesheets/landing-style.css?1282165672
+	http://localhost:3000/stylesheets/landing-style.css?1282167047
+	http://localhost:3000/stylesheets/landing-style.css?1282167418
+	http://localhost:3000/stylesheets/landing-style.css?1282167774
+	http://localhost:3000/stylesheets/landing-style.css?1282169217
+	http://localhost:3000/stylesheets/landing-style.css?1282169694
+	http://localhost:3000/stylesheets/landing-style.css?1282171501
+	http://localhost:3000/stylesheets/landing-style.css?1282172207
+	http://localhost:3000/stylesheets/landing-style.css?1282172596
+	http://localhost:3000/stylesheets/landing-style.css?1282172754
+	http://localhost:3000/stylesheets/landing-style.css?1282173971
 */
 
 @charset "utf-8";
@@ -35,13 +47,11 @@ brown #664429
 */
 
 body {
-	font-family: Verdana, Tahoma, Arial;
-	font-size: 14px;
 	color: black;
 	margin: 0;
 	padding: 0;
-	font-weight: normal;
 	background: #433726;
+	font: normal 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
 #wrap {
@@ -60,6 +70,8 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 	padding: 0;
 }
+
+
 
 h1 {
 	font-size: 24px;
@@ -108,7 +120,7 @@ a:hover {
 	float: left;
 	position: relative;
 	top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }
 
 #header a {
@@ -127,22 +139,20 @@ a:hover {
 #container {
 	position: relative;
 	top: 20px;
+	margin: 50px 50px 10px 50px
 }
 
 .info p {
-	font-size: 34px;
-	margin: 12px 0;
-	padding: 12px 0;
+	font-size: 24px;
 }
 
 .info-lp p {
 	font-size: 34px;
-	padding: 0px 50px;
 	text-align: left;
 }
 
 div.info-lp {
-	margin: 50px;
+	margin: 75px 20px 10px 20px;
 }
 
 .info p b {
@@ -251,17 +261,13 @@ p.small {
 
 .subscribe {
 	position: relative;
-	top: 35px;
-	height: 300px;
+	height: 70px;
+	margin-left: 170px;
+	margin-top: 25px;
+	width: 465px;
 }
 
 #form-email {
-	float: left;
-	width: 530px;
-	padding: 0px;
-	margin: 0;
-	position: absolute;
-	left: 160px;
 }
 
 #form-email p {
@@ -287,8 +293,9 @@ p.small {
 	height: 58px;
 	width: 77px;
 	position: relative;
-	left: 388px;
-	top: -60px;
+	float: right;
+	margin-top: -60px;
+	margin-left: -80px;
 }
 
 ul#prelaunch-signups {
@@ -338,7 +345,7 @@ div.winemaker-button {
 	position: relative;
 	font-size: 28px;
 	padding: 15px;
-	width: 300px;
+	width: 220px;
 	color: #000;
 	
 }
@@ -352,7 +359,7 @@ div.wino-button {
 	position: relative;
 	font-size: 28px;
 	padding: 15px;
-	width: 300px;
+	width: 220px;
 	margin-top: 25px;
 	color: #000;
 	
@@ -483,16 +490,43 @@ span.winemaker-bold {
 }
 
 div#pitch {
-	margin-top: 25px;
-	font-size: 190%;
+	font-size: 120%;
 	text-align: left;
-	margin-right: 50px;
-	margin-left: 50px;
 }
 
 div#questions {
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin: 20px 20px;
 	font-weight: bold;
+	color: #292116;
 }
+
+div#answer {
+	margin: 20px 20px;
+	font-weight: bold;
+	color: #292116;
+}
+
+div#lastly {
+	margin: 150px 0 0 0;
+	color: #292116;
+	text-align: center;
+}
+
+div.call {
+}
+
+img.barrel {
+}
+
+#lastly p a {
+	color: #443826;
+}
+
+#bpic {
+	width: 150px;
+	float: right;
+	padding: 15px;
+	margin-top: -50px;
+}
+
 

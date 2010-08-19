@@ -14,6 +14,7 @@ class PrelaunchSignupsController < ApplicationController
 
   def new
     @prelaunch_signup = PrelaunchSignup.new
+    @prelaunch_signup.winery = false
   end
 
   def edit
@@ -22,10 +23,17 @@ class PrelaunchSignupsController < ApplicationController
 
   def create
     @prelaunch_signup = PrelaunchSignup.new(params[:prelaunch_signup])
+    #logger.debug "winery: #{@prelaunch_signup.winery}"
     if @prelaunch_signup.save
       redirect_to(@prelaunch_signup, :notice => 'Prelaunch signup was successfully created.') 
     else
-      render :action => "new" 
+      if @prelaunch_signup.winery == true
+        #logger.debug "winery winemaker: #{@prelaunch_signup.winery}"
+        render :action => "winemaker" 
+      else
+        #logger.debug "winery wino: #{@prelaunch_signup.winery}"
+        render :action => "new" 
+      end
     end
   end
 
@@ -52,6 +60,7 @@ class PrelaunchSignupsController < ApplicationController
   # separate new page for winemakers so I can track on google analytics
   def winemaker
     @prelaunch_signup = PrelaunchSignup.new
+    @prelaunch_signup.winery = true
   end
   
 end

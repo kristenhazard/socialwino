@@ -1,6 +1,19 @@
 <div id="container">
-  <div>
-    
+  <div id="pitch">
+    <div id="facts">
+      <p>Join our growing community of social winos and winemakers.</p>
+    </div>
+    <div id="bpic"><%= image_tag "/images/redgrapes.png", :title => "grapes", :class => "barrel" %></div>
+    <div id="questions">
+      <p>Learn about the Central Coast wine region.</p>
+      <p>Plan your next wine tasting trip.</p>
+      <p>Rate and review the wine and your wine tasting experience.</p>
+      <p>Share your knowledge with other people interested in this wine region.</p>
+      <p>Connect with others who love this wine region.</p>
+    </div>
+    <div class="call">
+      <p>Enter your email here and we'll keep you posted about our launch plans.</p>
+    </div>
   </div>
   <div class="subscribe">
     <%= form_for(@prelaunch_signup, :html => { :id => "form-email" }) do |f| %>
@@ -11,6 +24,7 @@
        <% @prelaunch_signup.errors.full_messages.each do |msg| %>
          <span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
          <%= msg %>
+         <br/>
        <% end %>
      </div>
     </div>
@@ -18,11 +32,20 @@
     <% end %>
 
     <p>
-    <%= f.text_field :email,:placeholder => "winos enter e-mail address" %>
-    <%= f.submit "" %>
+      <%= f.text_field :email,:placeholder => "winos enter e-mail address" %>
+      <%= f.hidden_field :winery %>
+      <%= f.submit "" %>
     </p>
 
     <% end %>
+    
+    
    </div><!-- End Subscribe -->
-</div><!-- End Container -->            
+   
+   <div id="lastly">
+     <p>We will initially focus on Paso Robles, San Luis Obispo and Santa Maria Valley wine regions.</p>
+     <p>If you would like to help us create this new app please contact us here: <a href="mailto:info@socialwino.com?subject=let's build socialwino together">email socialwino</a>.</p>
+   </div>
+   
+</div><!-- End Container -->
   
