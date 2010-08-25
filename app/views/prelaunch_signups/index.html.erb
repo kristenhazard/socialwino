@@ -1,14 +1,24 @@
 <div id="container"> 
   <h1>prelaunch signups</h1>
   <p id="notice"><%= notice %></p>
-  <div class="info">
-    <ul id="prelaunch-signups">
+  <table class="info">
+    <tr>
+      <th>ID</th>
+      <th>email</th>
+      <th>winery?</th>
+      <th>created</th>
+    </tr>
     <% @prelaunch_signups.each do |prelaunch_signup| %>
-      <li>
+    <tr>
+      <td><%=h prelaunch_signup.id %></td>
+      <td>
           <%= link_to prelaunch_signup.email, edit_prelaunch_signup_path(prelaunch_signup) %>
-      </li>
+      </td>
+      <td><%=h prelaunch_signup.winery %></td>
+      <td><%=h prelaunch_signup.created_at %></td>
+    </tr>
     <% end %>
-    </ul>
-  </div><!-- End Info -->
+  
+  </table><!-- End Info -->
 </div><!-- container -->
     

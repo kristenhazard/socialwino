@@ -16,7 +16,6 @@ end
 group :test do
 #  gem "rspec"
   gem "rspec-rails", ">= 2.0.0.beta.17"
-  gem "machinist"
   gem "faker"
   gem "ZenTest"
   gem "autotest"
@@ -31,4 +30,5 @@ group :test do
   gem 'spork'
   gem "launchy"
   gem "ruby-debug"
+  gem "machinist"
 end
