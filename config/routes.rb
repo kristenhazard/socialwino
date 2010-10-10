@@ -1,5 +1,15 @@
 Socialwino::Application.routes.draw do |map|
 
+  
+
+  get "billboard/index"
+
+  get "twitter/index"
+
+  get "twitter/login"
+
+  get "twitter/finalize"
+
   resources :user_sessions
   resources :users
   resources :prelaunch_signups do
@@ -7,6 +17,8 @@ Socialwino::Application.routes.draw do |map|
       get :winemaker
     end
   end
+  
+  resources :wineries 
   
   root :to => "prelaunch_signups#landing"
   
