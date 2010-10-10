@@ -1,9 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.rc'
+gem 'rails'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'authlogic'
+gem 'pg'
+gem 'twitter'
+gem 'typus', :git => 'git://github.com/fesplugas/typus.git'
 
 # Bundle gems for certain environments:
 
@@ -11,6 +14,7 @@ group :development do
   gem "rspec-rails", ">= 2.0.0.beta.17"
   gem "hirb"
   gem "annotate"
+  gem 'taps'
 end
 
 group :test do
