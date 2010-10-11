@@ -2,7 +2,7 @@ class TwitterController < ApplicationController
   def index
   end
 
-  def login
+  def authorize
     oauth.set_callback_url("http://#{request.host}#{":#{request.port}" unless request.port == 80}/twitter/finalize")
     session[:request_token] = oauth.request_token.token
     session[:request_secret] = oauth.request_token.secret
@@ -18,8 +18,16 @@ class TwitterController < ApplicationController
     @profile = Twitter::Base.new(oauth).verify_credentials
     session[:request_token]
     session[:request_secret]
+    
     session[:auth_token] = oauth.access_token.token
     session[:auth_secret] = oauth.access_token.secret
+    
+    twitter_feed    = TwitterFeed.find_by_screen_name(profile.screen_name)
+    
+    twitter_feed.update_attributes({
+      :auth_token => oauth.access_token.token, 
+      :auth_token => oauth.access_token.secret,
+    })
   end
   
   private

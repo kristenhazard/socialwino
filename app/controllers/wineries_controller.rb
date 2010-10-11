@@ -5,7 +5,6 @@ class WineriesController < ApplicationController
   
   def show
     @winery = Winery.find(params[:id])
-    @twitter_feeds = @winery.twitter_feeds
   end
 
   def new

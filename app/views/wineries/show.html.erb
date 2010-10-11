@@ -1,6 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p><%= @winery.name %></p>
+<ol>
+<% for twitter_feed in @winery.twitter_feeds %>
+  <li>
+    <%=h twitter_feed.screen_name %>
+    <%=h twitter_feed.auth_token %>
+    <%=h twitter_feed.auth_secret %>
+    <td><%= link_to image_tag("/images/twitter_connect.png"), twitter_authorize_path(twitter_feed.screen_name) %></td>
+  </li>
+<% end %>
+</ol>
 
 <%= link_to 'Edit', edit_winery_path(@winery) %> |
 <%= link_to 'Back', wineries_path %>

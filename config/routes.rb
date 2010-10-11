@@ -6,7 +6,7 @@ Socialwino::Application.routes.draw do |map|
 
   get "twitter/index"
 
-  get "twitter/login"
+  get "twitter/authorize"
 
   get "twitter/finalize"
 
