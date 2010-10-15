@@ -22,12 +22,15 @@ class TwitterController < ApplicationController
     session[:auth_token] = oauth.access_token.token
     session[:auth_secret] = oauth.access_token.secret
     
-    twitter_feed    = TwitterFeed.find_by_screen_name(profile.screen_name)
+    twitter_feed    = TwitterFeed.find_by_screen_name(@profile.screen_name)
     
     twitter_feed.update_attributes({
       :auth_token => oauth.access_token.token, 
-      :auth_token => oauth.access_token.secret,
+      :auth_secret => oauth.access_token.secret,
     })
+    
+    redirect_to(wineries_url)
+    
   end
   
   private
