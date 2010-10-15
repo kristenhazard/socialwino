@@ -22,7 +22,7 @@ class TwitterController < ApplicationController
     session[:auth_token] = oauth.access_token.token
     session[:auth_secret] = oauth.access_token.secret
     
-    twitter_feed    = TwitterFeed.find_by_screen_name(@profile.screen_name)
+    twitter_feed = TwitterFeed.find_by_screen_name(@profile.screen_name)
     
     twitter_feed.update_attributes({
       :auth_token => oauth.access_token.token, 
@@ -33,15 +33,4 @@ class TwitterController < ApplicationController
     
   end
   
-  private
-  
-  def oauth
-    @oauth ||= Twitter::OAuth.new(APP_CONFIG[:twitter][:consumer_key], APP_CONFIG[:twitter][:consumer_secret])
-  end
-  
-  def client
-    oauth.authorize_from_acccess(session[:auth_token], session[:auth_secret])
-    Twitter::Base.new(oauth)
-  end
-
 end

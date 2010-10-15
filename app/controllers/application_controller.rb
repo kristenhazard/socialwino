@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   layout 'application'
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :oauth
   
   private
 
@@ -14,6 +14,11 @@ class ApplicationController < ActionController::Base
     return @current_user if defined?(@current_user)
     @current_user = current_user_session && current_user_session.record
   end
+  
+  # i want to put this in twitter_feed.rb but don't know how to share it
+  def oauth
+    @oauth ||= Twitter::OAuth.new(APP_CONFIG[:twitter][:consumer_key], APP_CONFIG[:twitter][:consumer_secret])
+  end  
   
   protected
   
@@ -45,4 +50,5 @@ class ApplicationController < ActionController::Base
     end
   end
   
+
 end
