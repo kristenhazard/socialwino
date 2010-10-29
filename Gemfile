@@ -4,7 +4,7 @@ gem 'rails'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'authlogic'
-gem 'pg'
+#gem 'pg'
 gem 'twitter'
 gem 'typus', :git => 'git://github.com/fesplugas/typus.git'
 

@@ -9,6 +9,7 @@
 	http://localhost:3000/stylesheets/socialwino.css?1279235904
 	http://localhost:3000/stylesheets/socialwino.css?1279236322
 	http://localhost:3000/stylesheets/socialwino.css?1280265697
+	http://localhost:3000/stylesheets/socialwino.css?1287168717
 */
 
 /* from baked cookies color palette
@@ -207,11 +208,11 @@ pre {
 }
 
 a {
-	color: #000;
+	color: #B3D18F;
 }
 
 a:visited {
-	color: #666;
+	color: rgba(179,209,143,0.9);
 }
 
 a:hover {

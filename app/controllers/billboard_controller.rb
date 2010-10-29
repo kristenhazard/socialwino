@@ -18,6 +18,14 @@ class BillboardController < ApplicationController
   end
   
   def initialize_tweets
+    @twitter_feed = TwitterFeed.first
+    client = @twitter_feed.client
+    @tweets = client.home_timeline
     
+    respond_to do |format|
+      format.html
+      format.json { render :layout => false ,
+                           :json => @tweets.to_json }
+    end
   end
 end
