@@ -1,4 +1,6 @@
 class BillboardController < ApplicationController
+  layout "billboard"
+  
   def index
     
     @twitter_feed = TwitterFeed.first

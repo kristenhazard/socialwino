@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>app</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Ken">
+	<%= stylesheet_link_tag "appcss/app.css" %>
+	
+	<link rel="stylesheet" href="css/app.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<%= javascript_include_tag 'jquery/jquery-1.4.2.min.js', 'app/jsoop.js','app/winetweets.js', 'app/main.js', 'app/tweets.js' %>
+	<!-- 
+	<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jsoop.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/winetweets.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tweets.js" type="text/javascript" charset="utf-8"></script>
+	
+	-->
+	<!-- Date: 2010-11-03 -->
+</head>
+<body>
+  <div id='ipad'>
+    
+    <div id="tweet-scroller">
+      <div>
+        <div class="tweet"><img src="http://a2.twimg.com/profile_images/736650826/Denise_transmitted_normal.jpg"></img><p>RT @lovenordic: Hi I am just starting out on  twitter and need some followers! My blog is quite nice :)</p></div>
+      </div>
+    </div>
+    <%= image_tag('app/redwine.png', :size=>"1000x247", :id=>"bottle") %>
+    
+    <div id="glass">
+      <%= image_tag('app/redwineglass.png', :size=>"270x630") %>
+    </div>
+    
+   <div id="wine-menu">
+    
+   </div>
+   
+   <div id="new-tweet" class="tweet">
+    
+   </div>
+
+  </div>
+</body>
+</html>
+
