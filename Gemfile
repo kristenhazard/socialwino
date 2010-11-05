@@ -6,7 +6,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'authlogic'
 #gem 'pg'
 gem 'twitter'
-gem 'typus', :git => 'git://github.com/fesplugas/typus.git'
+#gem 'typus', :git => 'git://github.com/fesplugas/typus.git'
 
 # Bundle gems for certain environments:
 

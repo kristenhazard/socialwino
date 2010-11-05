@@ -1,7 +1,0 @@
-# Typus Roles Configuration File
-#
-# Use the README file as a reference to customize settings.
-
-admin:
-  PrelaunchSignup: create, read, update, delete
-  User: create, read, update, delete

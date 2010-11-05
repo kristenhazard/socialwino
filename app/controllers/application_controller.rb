@@ -37,6 +37,7 @@ class ApplicationController < ActionController::Base
   end
   
   def logged_in?
+  logger.debug "XXXX current_user=#{current_user} XXXX"
     if current_user
       current_user
     end
