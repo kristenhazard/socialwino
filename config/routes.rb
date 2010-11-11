@@ -2,6 +2,9 @@ Socialwino::Application.routes.draw do |map|
 
   get "billboard/index"
   match "billboard" => "billboard#index"
+  get "billboard/show_demo"
+  match "billboard/demo" => "billboard#show_demo"
+  #resources :billboard
 
   get "twitter/index"
 

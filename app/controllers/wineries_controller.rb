@@ -1,4 +1,7 @@
 class WineriesController < ApplicationController
+  
+  before_filter :require_logged_in
+  
   def index
     @wineries = Winery.all
   end

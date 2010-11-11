@@ -1,4 +1,7 @@
 class TwitterController < ApplicationController
+  
+  before_filter :require_logged_in, :except => [:new, :create]
+  
   def index
   end
 
