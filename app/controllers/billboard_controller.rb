@@ -1,6 +1,6 @@
 class BillboardController < ApplicationController
   
-  before_filter :require_logged_in, :except => [:show_demo]
+  #before_filter :require_logged_in, :except => [:show_demo]
   
   layout "billboard"
   

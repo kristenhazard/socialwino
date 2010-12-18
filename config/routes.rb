@@ -1,10 +1,9 @@
-Socialwino::Application.routes.draw do |map|
+Socialwino::Application.routes.draw do 
 
   get "billboard/index"
-  match "billboard" => "billboard#index"
+  match "billboard", :to => "billboard#index"
   get "billboard/show_demo"
-  match "billboard/demo" => "billboard#show_demo"
-  #resources :billboard
+  match "billboard/demo", :to => "billboard#show_demo"
 
   get "twitter/index"
 
@@ -24,8 +23,8 @@ Socialwino::Application.routes.draw do |map|
   
   root :to => "prelaunch_signups#landing"
   
-  match 'login' => "user_sessions#new"
-  match 'logout' => "user_sessions#destroy"
+  match 'login', :to => "user_sessions#new"
+  match 'logout', :to => "user_sessions#destroy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
