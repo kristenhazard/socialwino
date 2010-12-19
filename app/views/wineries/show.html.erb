@@ -1,22 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p><%= @winery.name %></p>
-<ul>
+<div>
 <% for twitter_feed in @winery.twitter_feeds %>
-  <li>
-    s<%=h twitter_feed.screen_name %>
-  </li>
-  <li>
-    t<%=h twitter_feed.auth_token %>
-  </li>
-  <li>
-    s<%=h twitter_feed.auth_secret %>
-  </li>
-  <li>
-    <td><%= link_to image_tag("/images/twitter_connect.png"), twitter_authorize_path(twitter_feed.screen_name) %></td>
-  </li>
+  <p>
+    screen name <%=h twitter_feed.screen_name %>
+  </p>
+  <p>
+    auth token <%=h twitter_feed.auth_token %>
+  </p>
+  <p>
+    secret<%=h twitter_feed.auth_secret %>
+  </p>
+  <p>
+    <%= link_to image_tag("/images/twitter_connect.png"), twitter_authorize_path(twitter_feed.screen_name) %>
+  </p>
 <% end %>
-</ul>
+</div>
 
 <%= link_to 'Edit', edit_winery_path(@winery) %> |
 <%= link_to 'Back', wineries_path %>

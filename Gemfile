@@ -3,17 +3,18 @@ source 'http://rubygems.org'
 gem 'rails'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'authlogic'
-gem 'twitter'
+gem 'twitter', "< 1.0"
+gem 'devise' # Devise must be required before RailsAdmin
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 #gem 'pg'
 
 # Bundle gems for certain environments:
 
 group :development do
   gem "rspec-rails", ">= 2.0.0.beta.17"
-  gem "hirb"
   gem "annotate"
   gem 'taps'
+  gem "awesome_print"
 end
 
 group :test do

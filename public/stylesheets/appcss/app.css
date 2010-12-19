@@ -1,3 +1,5 @@
+/* @override http://localhost:3000/stylesheets/appcss/app.css?1288919185 */
+
 * {padding: 0; margin: 0;}
 
 #ipad {
@@ -6,6 +8,7 @@
   position: relative;
   background: url(tuscany-vineyard.jpg) no-repeat;
   overflow: hidden;
+    font-family: Helvetica, sans-serif;
 }
 
 #tweet-scroller {
@@ -28,17 +31,7 @@
   margin-left: 5px;
 }
 
-#bottle {
-  position: absolute;
-  top: 120px;
-   left: -320px;
-   -webkit-transition-property: -webkit-transform;
-   -webkit-transition-duration: 3s;
-}
 
-.pour {
-    -webkit-transform: rotate(10deg);
- }
 
 .tweetmove {
 	-webkit-anaimation: pourtweet 4s infinite;
@@ -75,11 +68,14 @@
 
 #new-tweet {
   position: absolute;
-  left: 645px;
-  top: 460px;
+  left: 445px;
+  top: 188px;
+  z-index: 0;
+  
 }
 
 .tweet {
+  position: relative;
   width: 200px;
   height: 110px;
   border: 4px solid #DC668E;
@@ -94,8 +90,25 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#2c090d), to(#9e050f));
   background: -moz-linear-gradient(left,#2c090d,#9e050f);
   color: white;
-  font-family: Helvetica, sans-serif;
+
   font-size: 14px;
+}
+
+.tweet .time {
+  position:absolute;
+  padding: 4px;
+  bottom: 0;
+  right: 0;
+  font-size: .7em;
+  color: #DC668E;
+}
+.tweet .nr {
+  position: absolute;
+  bottom: 0;
+  padding: 4px;
+  left: 0px;
+  font-size: .7em;
+  color: #DC668E;
 }
 
 .tweet img {
@@ -109,3 +122,185 @@
   font-size: 13px;
   margin: 7px 5px 0 5px;
 }
+
+/* @group #wine-menu */
+.wine-menu {
+  background: rgba(255, 255, 255, .5);
+	position: absolute;
+	top: 540px;
+	left: -300px; /* initially hidden */
+	height: 220px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-transition: left 1s ease;
+}
+.show-menu {
+  left: 0;
+}
+.wine {
+  position: relative;
+	width: 105px;
+	height: 200px;
+	float: left;
+	-webkit-transition: -webkit-transform 2s ease;
+}
+
+.wine-menu h4 {
+  position: absolute;
+  left: 274px;
+  top: 42px;
+  width: 100px;
+  text-align: right;
+  -webkit-transform: rotate(-90deg);
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  text-shadow: 1px 1px 2px white;
+  padding: 5px;
+  background: rgba(255, 255, 255, .5);
+}
+
+.wine h5 {
+	-webkit-transform: rotate(-90deg) translate(-130px, -33px);
+}
+
+.wine h5 span {
+	color: #9e050f;
+	font-size: 1em;
+	}
+.wine img {
+  opacity: 1;
+	position: relative;
+	left: 32px;
+
+}
+
+
+
+
+.wine.selected img {
+  opacity: .5;
+}
+
+.wine p {
+	position: absolute;
+	height: 135px;
+	width: 270px;
+	top: 50px;
+	left: 55px;
+	background:  #ddd;
+	
+	padding: 10px 10px 10px 10px;
+	font-size: .8em;
+	-webkit-box-shadow: 0 0 8px #333;
+	display: none;
+	}
+  .show-info p {
+    display: block;
+    z-index: 5;
+  }
+  .show-info {
+    -webkit-transform: scale(1.1);
+    z-index: 7;
+  }
+  
+  /* Tweet Fly Away - Animation */
+  @-webkit-keyframes AN-ani-0 {
+   0% {
+  	-webkit-transform: translate3d(-5px, 0px, 0px) scale3d(1, 1, 1) skew(0deg, 0deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+  -webkit-animation-timing-function: linear;
+  opacity: 1;
+   }
+   32.86% {
+  	-webkit-transform: translate3d(127px, -226px, 0px) scale3d(0.7, 0.7, 1) skew(0deg, 0deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+  opacity: 1;
+  -webkit-animation-timing-function: linear;
+   }
+   100% {
+  	-webkit-transform: translate3d(384px, -400px, 0px) scale3d(0.3, 0.3, 1) skew(50deg, 0deg) rotateX(0deg) rotateY(0deg) rotateZ(720deg);
+
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+   }
+  }
+  
+  .fly-away {
+    -webkit-transform: translate3d(384px, -400px, 0px) scale3d(0.3, 0.3, 1) skew(50deg, 0deg) rotateX(0deg) rotateY(0deg) rotateZ(720deg); 
+    -webkit-animation-timing-function: linear; 
+    opacity: 0; 
+    -webkit-animation-name: AN-ani-0; 
+    -webkit-animation-duration: 3.5s;
+  }
+  
+  /* Pour - Bottle Animation */
+  @-webkit-keyframes AN-ani-1 {
+   0% {
+  	-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+   }
+   100% {
+  	-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(8deg);
+
+   }
+  }
+  #bottle {
+    position: absolute;
+    z-index: 5;
+    top: 120px;
+    left: -320px;
+     -webkit-transition-property: -webkit-transform;
+     -webkit-transition-duration: 3s;
+  }
+
+  .pour {
+      -webkit-transform: rotate(10deg);
+   }
+  /* Pour - Tweet Animation */
+  @-webkit-keyframes AN-ani-10 {
+   0% {
+  	-webkit-transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+  -webkit-animation-timing-function: linear;
+   }
+   22.33% {
+  	-webkit-transform: translate3d(107px, 61px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(4deg);
+
+  -webkit-animation-timing-function: linear;
+   }
+   31.16% {
+  	-webkit-transform: translate3d(140px, 75px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(7deg);
+
+  -webkit-animation-timing-function: linear;
+   }
+   43.02% {
+  	-webkit-transform: translate3d(209px, 92px, 0px) scale3d(0.5, 0.5, 1) rotateX(0deg) rotateY(0deg) rotateZ(8deg);
+
+  -webkit-animation-timing-function: linear;
+   }
+   64.65% {
+  	-webkit-transform: translate3d(205px, 128px, 0px) scale3d(0.6, 0.6, 1) rotateX(0deg) rotateY(0deg) rotateZ(-10deg);
+
+  -webkit-animation-timing-function: linear;
+   }
+   81.4% {
+  	-webkit-transform: translate3d(202px, 207px, 0px) scale3d(0.7, 0.7, 1) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+
+  -webkit-animation-timing-function: linear;
+   }
+   100% {
+  	-webkit-transform: translate3d(201px, 274px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+  -webkit-animation-timing-function: ease;
+   }
+  }
+  .tweet-pour {
+    -webkit-transform: translate3d(201px, 274px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg); 
+    -webkit-animation-timing-function: ease; 
+    -webkit-animation-name: AN-ani-10; -webkit-animation-duration: 4.3s;
+  }
+  .in-glass {
+    left: 600px; !important
+    top:  300px; !important
+  }
+/* @end */
+

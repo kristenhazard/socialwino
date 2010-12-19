@@ -26,13 +26,13 @@
         <a id="logo" href="/"></a>
         <ul id="user-bar">
          <% if current_user %>
-            <li><%= link_to current_user.username, edit_user_path(:current) %></li>
+            <li><%= link_to current_user.username, edit_user_path(current_user) %></li>
 						<li><%= link_to "Billboard", billboard_path %></li>
 						<li><%= link_to "Demo", billboard_demo_path %></li>
-            <li><%= link_to "LOGOUT", logout_path %></li>
+            <li><%= link_to "LOGOUT", destroy_user_session_path %></li>
           <% else %>
-            <li><%= link_to "SIGN UP", new_user_path %></li>
-            <li><%= link_to "SIGN IN", login_path %></li>
+            <li><%= link_to "SIGN UP", new_user_registration_path %></li>
+            <li><%= link_to "SIGN IN", new_user_session_path %></li>
           <% end %>
         </ul>
       </div>
