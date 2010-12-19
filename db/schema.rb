@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(:version => 20101219000205) do
   add_index "histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
 
   create_table "prelaunch_signups", :force => true do |t|
-    t.string   "email"
-    t.boolean  "winery"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "email"
+    t.boolean   "winery"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "twitter_feeds", :force => true do |t|
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(:version => 20101219000205) do
   end
 
   create_table "user_sessions", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
@@ -67,6 +67,15 @@ ActiveRecord::Schema.define(:version => 20101219000205) do
 
   create_table "wineries", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "winery_twitter_feeds", :force => true do |t|
+    t.string   "screen_name"
+    t.string   "auth_token"
+    t.string   "auth_secret"
+    t.integer  "winery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

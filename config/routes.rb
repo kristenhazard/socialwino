@@ -1,7 +1,9 @@
 Socialwino::Application.routes.draw do 
 
   devise_for :users
-
+  namespace :user do
+    root :to => "users#index"
+  end
   get "billboard/index"
   match "billboard", :to => "billboard#index"
   get "billboard/show_demo"
