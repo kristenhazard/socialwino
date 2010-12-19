@@ -1,6 +1,6 @@
 class PrelaunchSignupsController < ApplicationController
   
-  before_filter :require_logged_in, :only => [:index, :destroy]
+  before_filter :authenticate_user!, :only => [:index, :destroy]
   
   layout "prelaunch_signup"
   
