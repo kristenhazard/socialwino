@@ -1,7 +1,13 @@
-Socialwino::Application.routes.draw do |map|
+Socialwino::Application.routes.draw do 
 
+  devise_for :users
+  namespace :user do
+    root :to => "users#index"
+  end
   get "billboard/index"
-  match "billboard" => "billboard#index"
+  match "billboard", :to => "billboard#index"
+  get "billboard/show_demo"
+  match "billboard/demo", :to => "billboard#show_demo"
   
   get "billboard/initialize_tweets"
   get "billboard/new_tweets"
@@ -12,7 +18,7 @@ Socialwino::Application.routes.draw do |map|
 
   get "twitter/finalize"
 
-  resources :user_sessions
+  # resources :user_sessions
   resources :users
   resources :prelaunch_signups do
     new do
@@ -24,8 +30,8 @@ Socialwino::Application.routes.draw do |map|
   
   root :to => "prelaunch_signups#landing"
   
-  match 'login' => "user_sessions#new"
-  match 'logout' => "user_sessions#destroy"
+  # match 'login', :to => "user_sessions#new"
+  # match 'logout', :to => "user_sessions#destroy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

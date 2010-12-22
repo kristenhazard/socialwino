@@ -10,13 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101010222256) do
+ActiveRecord::Schema.define(:version => 20101219000205) do
 
-  create_table "prelaunch_signups", :force => true do |t|
-    t.string   "email"
-    t.boolean  "winery"
+  create_table "histories", :force => true do |t|
+    t.string   "message"
+    t.string   "username"
+    t.integer  "item"
+    t.string   "table"
+    t.integer  "month",      :limit => 2
+    t.integer  "year",       :limit => 5
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  add_index "histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
+
+  create_table "prelaunch_signups", :force => true do |t|
+    t.string    "email"
+    t.boolean   "winery"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "twitter_feeds", :force => true do |t|
@@ -29,33 +42,40 @@ ActiveRecord::Schema.define(:version => 20101010222256) do
   end
 
   create_table "user_sessions", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "username"
     t.string   "email"
-    t.string   "crypted_password"
-    t.string   "password_salt"
-    t.string   "persistence_token"
-    t.string   "single_access_token",                    :null => false
-    t.string   "perishable_token",                       :null => false
-    t.integer  "login_count",         :default => 0,     :null => false
-    t.integer  "failed_login_count",  :default => 0,     :null => false
-    t.datetime "last_request_at"
-    t.datetime "current_login_at"
-    t.datetime "last_login_at"
-    t.string   "current_login_ip"
-    t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "admin",               :default => false
+    t.boolean  "admin",                :default => false
+    t.string   "encrypted_password"
+    t.string   "password_salt"
+    t.string   "reset_password_token"
+    t.string   "remember_token"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count"
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
 
   create_table "wineries", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "winery_twitter_feeds", :force => true do |t|
+    t.string   "screen_name"
+    t.string   "auth_token"
+    t.string   "auth_secret"
+    t.integer  "winery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

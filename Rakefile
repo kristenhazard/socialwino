@@ -4,4 +4,5 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Rails::Application.load_tasks
+#Rails::Application.load_tasks
+Socialwino::Application.load_tasks

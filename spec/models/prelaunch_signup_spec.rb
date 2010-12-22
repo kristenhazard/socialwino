@@ -13,7 +13,7 @@ describe PrelaunchSignup do
   
   it "should fail without email" do
     @prelaunchsignup.should_not be_valid
-    #@prelaunchsignup.should have(1).error_on(:email)
+    @prelaunchsignup.should have(1).error_on(:email)
   end
   
   

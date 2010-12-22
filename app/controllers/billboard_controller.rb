@@ -1,4 +1,5 @@
 class BillboardController < ApplicationController
+  
   layout "billboard"
   
   def index
@@ -7,10 +8,19 @@ class BillboardController < ApplicationController
     @tweets = client.home_timeline
   end
   
-  def new_tweets
+  
+  def update_tweets
+
     @twitter_feed = TwitterFeed.first
     client = @twitter_feed.client
-    @tweets = client.home_timeline
+    @tweets = client.home_timeline(:since_id => params[:last_tweet_id])
+  end
+  
+  def initialize_tweets
+    @twitter_feed = TwitterFeed.first
+    client = @twitter_feed.client
+    @tweets = client.home_timeline(:count => 30)
+    @last_tweet_id = @tweets.last.id
     
     respond_to do |format|
       format.html
@@ -19,11 +29,11 @@ class BillboardController < ApplicationController
     end
   end
   
-  def initialize_tweets
+  # this demo will be outside of authentication, no need to login for it
+  def show_demo
     @twitter_feed = TwitterFeed.first
     client = @twitter_feed.client
     @tweets = client.home_timeline
-    
     respond_to do |format|
       format.html
       format.json { render :layout => false ,

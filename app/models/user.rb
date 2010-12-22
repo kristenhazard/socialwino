@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
-  acts_as_authentic
-  
-  def self.find_by_username_or_email(login)
-    User.find_by_username(login) || User.find_by_email(login)
-  end
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :confirmable, :lockable and :timeoutable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :username
+
 end

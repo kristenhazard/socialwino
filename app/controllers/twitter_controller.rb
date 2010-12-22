@@ -1,4 +1,7 @@
 class TwitterController < ApplicationController
+  
+  before_filter :authenticate_user!, :except => [:new, :create]
+  
   def index
   end
 
