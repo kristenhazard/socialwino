@@ -4,6 +4,7 @@ Socialwino::Application.routes.draw do |map|
   match "billboard" => "billboard#index"
   
   get "billboard/initialize_tweets"
+  get "billboard/new_tweets"
 
   get "twitter/index"
 

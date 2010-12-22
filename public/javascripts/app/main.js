@@ -8,12 +8,45 @@ $(function () {
   var tweets ;
   var paused = false;
   console.log ("DOM Ready");
-  
+  // Register Events
+  resize ();
   // Gather Sample Tweet Set
-  getTweets ();
+  getTweets (1024);
   scrollTweets ();
   setupWineMenu ();
   pourTweet();
+  
+  function resize (minWidth) {
+    console.log ("Attach Resize Event")
+    newSize(1024)
+	  resize (1024);
+	  function newSize (minWidth) {
+      const minTweetWidth = 200; // includes the border and padding
+      var newWidth = Math.max (minWidth, $(window).width());
+      var nrTweets = Math.floor(newWidth / minTweetWidth);
+      var space = Math.round((newWidth % minTweetWidth)/(nrTweets - 1));
+      console.log ("Width: " + newWidth + " Nr: " + nrTweets + " Space: " + space);
+      // Change CSS Properties
+      $('#tweet-scroller > div div').css({"margin-left": space});
+      $('#ipad').width(newWidth);
+    }
+	  function resize (minWidth) {
+       console.log ("Attach Resize Event");
+       window.onresize = function () {
+         console.log ("Resize Window")
+         newSize(minWidth)
+       }
+     }
+    
+    $('window').resize(function () {
+      console.log ("Resize Window")
+      const minTweetWidth = 200; // includes the border and padding
+      var newWidth = $(window).width();
+      var nrTweets = Math.floor(newWidth / minTweetWidth);
+      var space = (newWidth % minTweetWidth)/(nrTweets - 1);
+      console.log ("Width: " + newWidth + " Nr: " + nrTweets + " Space: " + space);
+    })
+  }
   
   function getTweets () {
     var $divs
@@ -32,11 +65,12 @@ $(function () {
     // Slide Left
     setInterval (function () {
       console.log ("scroller tweets")
-      $div.animate ({left: -TWEET_WIDTH - 12}, 2200, "swing", function () {
+      var space = parseInt($('#tweet-scroller > div div').css("margin-left"));
+      $div.animate ({left: -TWEET_WIDTH - 3 - space}, 2200, "swing", function () {
         // Clone Left Elemnt and Add it to the End
         console.log ("remove now")
         $clone = $("div:first", $div).remove();
-        $div.css('left', 0);
+        $div.css('left', -2);
         $div.append($clone);
 
         
