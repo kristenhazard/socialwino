@@ -24,7 +24,7 @@ group :test do
   gem "ZenTest"
   gem "autotest"
   gem "autotest-rails"
-  gem "autotest-fsevent"
+  #gem "autotest-fsevent"
   gem "autotest-growl"
   gem "cucumber"
   gem "database_cleaner"
