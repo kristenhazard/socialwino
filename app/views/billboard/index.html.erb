@@ -1,4 +1,14 @@
-<h1>Billboard#index</h1>
-<p>Find me in app/views/billboard/index.html.erb</p>
-<p>This was added to test the git / gitx system</p>
-<p>ONe more change</p>
+<table class="info">
+		<p>
+			<h1><%= @last_tweet_id %></h1>
+		</p>
+    <tr>
+      <th>ID</th>
+    </tr>
+    <% @tweets.each do |tweet| %>
+    <tr>
+      <td><%=h tweet.id %></td>
+    </tr>
+    <% end %>
+  
+  </table><!-- End Info -->

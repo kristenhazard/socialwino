@@ -13,8 +13,11 @@ Socialwino::Application.routes.draw do
   match "billboard", :to => "billboard#index"
   get "billboard/show_demo"
   match "billboard/demo", :to => "billboard#show_demo"
+  get "billboard/update_tweets"
+  match "billboard/update/:id", :to => "billboard#update_tweets"
   
   get "billboard/initialize_tweets"
+  get "billboard/new_tweets"
 
   get "twitter/index"
 
