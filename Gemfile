@@ -8,6 +8,7 @@ gem 'devise' # Devise must be required before RailsAdmin
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 #gem 'pg'
 
+
 # Bundle gems for certain environments:
 
 group :development do
