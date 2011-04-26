@@ -16,21 +16,11 @@ Socialwino::Application.routes.draw do
   resources :regions
   resources :varieties
   
-  resources :users
-
-  
-  
-  # devise_for :users do
-  #   get "sign_in", :to => "devise/sessions#new"
-  # end
-  
-  # as :user do
-  #   get "login", :to => "devise/sessions#new"
-  # end
-
   namespace :user do
     root :to => "users#index"
   end
+  
+  resources :users
   
   get "billboard/index"
   match "billboard", :to => "billboard#index"
