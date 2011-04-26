@@ -15,6 +15,18 @@ class BillboardController < ApplicationController
     end
   end
   
+  def tweets
+    
+  end
+  
+  def photos
+    
+  end
+  
+  def now_pouring
+    
+  end
+  
   
   def update_tweets
     last_tweet_id = params[:id]
@@ -32,7 +44,7 @@ class BillboardController < ApplicationController
   def initialize_tweets
     @twitter_feed = TwitterFeed.first
     client = @twitter_feed.client
-    @tweets = client.home_timeline(:count => 30)
+    @tweets = client.home_timeline(:count => 15)
     @last_tweet_id = @tweets.first.id
     
     respond_to do |format|

@@ -1,7 +1,23 @@
 Socialwino::Application.routes.draw do 
+  
+  root :to => "prelaunch_signups#landing"
+  
+  resources :wineries do
+    resources :wines
+    resources :tasting_rooms
+  end
+  
+  get "twitter/index"
+  get "twitter/authorize"
+  get "twitter/finalize"
+
+  resources :regions
+  resources :varieties
 
   devise_for :users
-
+  
+  resources :users
+  
   devise_scope :user do
     get "login", :to => "devise/sessions#new"
   end
@@ -9,33 +25,25 @@ Socialwino::Application.routes.draw do
   namespace :user do
     root :to => "users#index"
   end
+  
   get "billboard/index"
   match "billboard", :to => "billboard#index"
   get "billboard/show_demo"
   match "billboard/demo", :to => "billboard#show_demo"
   get "billboard/update_tweets"
   match "billboard/update/:id", :to => "billboard#update_tweets"
-  
   get "billboard/initialize_tweets"
   get "billboard/new_tweets"
 
-  get "twitter/index"
-
-  get "twitter/authorize"
-
-  get "twitter/finalize"
-
   # resources :user_sessions
-  resources :users
   resources :prelaunch_signups do
     new do
       get :winemaker
     end
   end
   
-  resources :wineries 
   
-  root :to => "prelaunch_signups#landing"
+  
   
   # match 'login', :to => "user_sessions#new"
   # match 'logout', :to => "user_sessions#destroy"

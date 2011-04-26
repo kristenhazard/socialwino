@@ -6,7 +6,10 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'twitter', "< 1.0"
 gem 'devise' # Devise must be required before RailsAdmin
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-#gem 'pg'
+gem 'tweetstream'
+gem 'paperclip'
+gem 'pg'
+gem 'aws-s3'
 
 
 # Bundle gems for certain environments:
@@ -25,17 +28,15 @@ group :test do
   gem "ZenTest"
   gem "autotest"
   gem "autotest-rails"
-  #gem "autotest-fsevent"
-  gem "autotest-growl"
-  gem "cucumber"
-  gem "database_cleaner"
-  gem "cucumber-rails"
-  gem "capybara"
-  gem "capybara-envjs"
-  gem 'spork'
-  gem "launchy"
-  gem "ruby-debug"
-  gem "machinist"
-  gem "factory_girl"
-  gem "factory_girl_rails"
+  # gem "cucumber"
+  # gem "database_cleaner"
+  # gem "cucumber-rails"
+  # gem "capybara"
+  # gem "capybara-envjs"
+  # gem 'spork'
+  # gem "launchy"
+  # gem "ruby-debug"
+  # gem "machinist"
+  # gem "factory_girl"
+  # gem "factory_girl_rails"
 end

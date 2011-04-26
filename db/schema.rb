@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101219000205) do
+ActiveRecord::Schema.define(:version => 20110425210215) do
 
   create_table "histories", :force => true do |t|
     t.string   "message"
@@ -26,10 +26,27 @@ ActiveRecord::Schema.define(:version => 20101219000205) do
   add_index "histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
 
   create_table "prelaunch_signups", :force => true do |t|
-    t.string    "email"
-    t.boolean   "winery"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "email"
+    t.boolean  "winery"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "regions", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasting_rooms", :force => true do |t|
+    t.integer  "winery_id"
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "twitter_feeds", :force => true do |t|
@@ -42,8 +59,8 @@ ActiveRecord::Schema.define(:version => 20101219000205) do
   end
 
   create_table "user_sessions", :force => true do |t|
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
@@ -65,19 +82,43 @@ ActiveRecord::Schema.define(:version => 20101219000205) do
     t.string   "last_sign_in_ip"
   end
 
-  create_table "wineries", :force => true do |t|
+  create_table "varieties", :force => true do |t|
     t.string   "name"
+    t.string   "wine_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "winery_twitter_feeds", :force => true do |t|
-    t.string   "screen_name"
-    t.string   "auth_token"
-    t.string   "auth_secret"
-    t.integer  "winery_id"
+  create_table "wineries", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.string   "background_file_name"
+    t.string   "background_content_type"
+    t.integer  "background_file_size"
+    t.datetime "background_updated_at"
+  end
+
+  create_table "wines", :force => true do |t|
+    t.integer  "winery_id"
+    t.integer  "region_id"
+    t.integer  "variety_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "label_file_name"
+    t.string   "label_content_type"
+    t.integer  "label_file_size"
+    t.datetime "label_updated_at"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.integer  "year"
   end
 
 end

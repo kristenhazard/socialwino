@@ -1,4 +1,4 @@
-rvm wrapper ruby-1.8.7-p174@socialwino3 textmate
-rvm use ruby-1.8.7-p174
+rvm wrapper ruby-1.9.2-head@socialwino textmate
+rvm use ruby-1.9.2-head
 rvm_gemset_create_on_use_flag=1
-rvm gemset use socialwino3
+rvm gemset use socialwino

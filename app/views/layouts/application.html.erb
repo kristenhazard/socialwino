@@ -27,8 +27,8 @@
         <ul id="user-bar">
          <% if current_user %>
             <li><%= link_to current_user.username, edit_user_path(current_user) %></li>
-						<li><%= link_to "Billboard", billboard_path %></li>
-						<li><%= link_to "Demo", billboard_demo_path %></li>
+						<li><%= link_to "billboard", billboard_path %></li>
+						<li><%= link_to "demo", billboard_demo_path %></li>
             <li><%= link_to "LOGOUT", destroy_user_session_path %></li>
           <% else %>
             <li><%= link_to "SIGN UP", new_user_registration_path %></li>
@@ -39,6 +39,12 @@
     </div>
     <div id="nav-shell" class="shell">
       <div id="nav" class="inner">
+				<ul>
+					<li><%= link_to "wineries", wineries_path %></li>
+					<li><%= link_to "regions", regions_path %></li>
+					<li><%= link_to "varieties", varieties_path %></li>
+					<li><%= link_to "users", users_path %></li>
+				</ul>
       </div>
     </div>
     <div id="subnav-shell" class="shell">
