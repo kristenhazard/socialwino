@@ -38,13 +38,14 @@ $(function () {
        }
      }
     
-    $('window').resize(function () {
+    $(window).resize(function () {
       console.log ("Resize Window")
       const minTweetWidth = 200; // includes the border and padding
       var newWidth = $(window).width();
       var nrTweets = Math.floor(newWidth / minTweetWidth);
       var space = (newWidth % minTweetWidth)/(nrTweets - 1);
       console.log ("Width: " + newWidth + " Nr: " + nrTweets + " Space: " + space);
+      scaleImage($(window));
     })
   }
   
@@ -122,7 +123,36 @@ $(function () {
       console.log ("Touched Wine Bottle");
      
     })
-  }    
+  } 
+  // The following code added to scale background image 4/25/11
+  // Also, added image to HTML (removed from CSS background)
+  $(window).bind ("load",function () {
+    console.log ("Resources Ready")
+    scaleImage ($(this));
+  });
+  
+  // $(window).resize(function() {
+  //     var $window = $(this);
+  //     scaleImage ($window);
+  //   });   
 
-         
+  // scaleImage - adjust image size to fit window
+   function scaleImage ($win) {
+     // Screen Dimensions
+     var screenW = $win.width();
+     var screenH = $win.height();
+     var screenRatio = screenW / screenH;
+     // Image Dimensions
+     var $img = $('#background-img > img');
+     var $imgW = $img.attr('width');
+     var $imgH = $img.attr('height');
+     // Scale Factors
+     var scaleW = screenW / $imgW;
+     var scaleH = screenH / $imgH;
+     console.log("Resize Event: w = " + screenW + ", h = " + screenH);
+     $img.css ({width: $imgW * scaleW, height: $imgH * scaleH});
+     $img.fadeTo(500, .6);
+     $('#content').css ({width: screenW, height: screenH});
+   }
+   // The following code above added to scale background image 4/25/11     
 });

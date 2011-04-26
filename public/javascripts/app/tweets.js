@@ -64,6 +64,7 @@ var Tweets = Class.extend ({
     //Fri Oct 29 16:40:25 +0000 2010
     time = tweet.created_at.split(" ");
     time = time[0] + " " + time[1] + " " + time[2] + " " + time[3];
+    $box.append ($('<p class="user-name">' + tweet.user.name + '</p>'))
     $box.append ($('<p>' + tweet.text + '</p>'));
     $box.append ($('<p class="time">' + time + '</p>'));
     $box.append ($('<p class="nr">' + nr + '</p>')); // add tweet number

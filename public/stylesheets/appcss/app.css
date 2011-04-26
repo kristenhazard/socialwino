@@ -1,19 +1,23 @@
 /* @override http://localhost:3000/stylesheets/appcss/app.css?1288919185 */
-
+   
 * {padding: 0; margin: 0;}
 
 #ipad {
+  /* For no scale image
   width: 1024;
   height: 768px;
   position: relative;
   background: url(tuscany-vineyard.jpg) repeat-x;
   overflow: hidden;
-    font-family: Helvetica, sans-serif;
+  */
+  position: relative;
+  font-family: Helvetica, sans-serif;
 }
 
 #tweet-scroller {
-  position: relative;
-  margin-top: 6px;
+  position: absolute;
+  top: 6px;
+  left: 0;
 
   overflow: hidden;
 }
@@ -77,7 +81,7 @@
 .tweet {
   position: relative;
   width: 192px;
-  height: 110px;
+  height: 140px;
   border: 4px solid #DC668E;
   overflow: hidden;
   
