@@ -1,0 +1,33 @@
+<h1>Listing tasting_rooms</h1>
+
+<table>
+  <tr>
+    <th>Winery</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zipcode</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tasting_rooms.each do |tasting_room| %>
+  <tr>
+    <td><%= tasting_room.winery_id %></td>
+    <td><%= tasting_room.name %></td>
+    <td><%= tasting_room.address %></td>
+    <td><%= tasting_room.city %></td>
+    <td><%= tasting_room.state %></td>
+    <td><%= tasting_room.zipcode %></td>
+    <td><%= link_to 'Show', tasting_room %></td>
+    <td><%= link_to 'Edit', edit_tasting_room_path(tasting_room) %></td>
+    <td><%= link_to 'Destroy', tasting_room, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tasting room', new_tasting_room_path %>

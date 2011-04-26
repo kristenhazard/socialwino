@@ -1,0 +1,23 @@
+
+<div>for <%= @winery.name %></div>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Region:</b>
+  <%= @wine.region_id %>
+</p>
+
+<p>
+  <b>Variety:</b>
+  <%= @wine.variety_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @wine.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_winery_wine_path(@winery, @wine) %> |
+<%= link_to 'Back', winery_wines_path(@winery) %>

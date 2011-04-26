@@ -1,0 +1,41 @@
+<%= form_for(@tasting_room) do |f| %>
+  <% if @tasting_room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tasting_room.errors.count, "error") %> prohibited this tasting_room from being saved:</h2>
+
+      <ul>
+      <% @tasting_room.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :winery_id %><br />
+    <%= f.text_field :winery_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+development:
+  bucket: socialwino-dev
+  access_key_id: AKIAILR4IRROKWKEPSSQ
+  secret_access_key: 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
+
+test:
+  bucket: socialwino-test
+  access_key_id: AKIAILR4IRROKWKEPSSQ
+  secret_access_key: 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
+  
+cucumber:
+  bucket: socialwino-test
+  access_key_id: AKIAILR4IRROKWKEPSSQ
+  secret_access_key: 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
+    
+staging:
+  bucket: socialwino-staging
+  access_key_id: AKIAILR4IRROKWKEPSSQ
+  secret_access_key: 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
+
+production:
+  bucket: socialwino
+  access_key_id: AKIAILR4IRROKWKEPSSQ
+  secret_access_key: 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

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Winery:</b>
+  <%= @tasting_room.winery_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @tasting_room.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @tasting_room.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @tasting_room.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @tasting_room.state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%= @tasting_room.zipcode %>
+</p>
+
+
+<%= link_to 'Edit', edit_tasting_room_path(@tasting_room) %> |
+<%= link_to 'Back', tasting_rooms_path %>

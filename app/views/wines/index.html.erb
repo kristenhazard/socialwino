@@ -1,0 +1,32 @@
+<h1>Listing wines</h1>
+<div>for <%= @winery.name %></div>
+
+<table>
+  <tr>
+    <th>Label</th>
+    <th>Year</th>
+    <th>Wine</th>
+    <th>Region</th>
+    <th>Variety</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wines.each do |wine| %>
+  <tr>
+    <td><%= image_tag wine.label.url(:thumb) %></td>
+    <td><%= wine.year %></td>
+    <td><%= wine.name %></td>
+    <td><%= wine.region_id %></td>
+    <td><%= wine.variety_id %></td>
+    <td><%= link_to 'Show', winery_wine_path(@winery, wine) %></td>
+    <td><%= link_to 'Edit', edit_winery_wine_path(@winery, wine) %></td>
+    <td><%= link_to 'Destroy', winery_wine_path(@winery, wine), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wine', new_winery_wine_path(@winery) %>
