@@ -22,6 +22,8 @@ Socialwino::Application.routes.draw do
   
   resources :users
   
+  match '/user' => 'users#index', :controller => :users
+  
   get "billboard/index"
   match "billboard", :to => "billboard#index"
   get "billboard/show_demo"
