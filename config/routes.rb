@@ -1,5 +1,7 @@
 Socialwino::Application.routes.draw do 
   
+  devise_for :users
+  
   root :to => "prelaunch_signups#landing"
   
   resources :wineries do
@@ -16,11 +18,15 @@ Socialwino::Application.routes.draw do
   
   resources :users
 
-  devise_for :users
   
-  as :user do
-    get "login", :to => "devise/sessions#new"
-  end
+  
+  # devise_for :users do
+  #   get "sign_in", :to => "devise/sessions#new"
+  # end
+  
+  # as :user do
+  #   get "login", :to => "devise/sessions#new"
+  # end
 
   namespace :user do
     root :to => "users#index"

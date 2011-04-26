@@ -10,6 +10,7 @@ gem 'tweetstream'
 gem 'paperclip'
 gem 'pg'
 gem 'aws-s3'
+gem 'heroku'
 
 
 # Bundle gems for certain environments:
