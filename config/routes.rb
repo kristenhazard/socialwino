@@ -17,12 +17,12 @@ Socialwino::Application.routes.draw do
   resources :varieties
   
   namespace :user do
-    root :to => "users#index"
+    root :to => "wineries#index"
   end
   
   resources :users
   
-  match '/user' => 'users#index', :controller => :users
+  # match '/user' => 'users#index'
   
   get "billboard/index"
   match "billboard", :to => "billboard#index"

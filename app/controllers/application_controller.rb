@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
   layout 'application'
   helper_method :oauth
   
+  def after_sign_in_path_for(resource)
+      wineries_path
+  end
+  
   private
   
   # i want to put this in twitter_feed.rb but don't know how to share it
