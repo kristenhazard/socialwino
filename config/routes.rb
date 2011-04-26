@@ -13,12 +13,12 @@ Socialwino::Application.routes.draw do
 
   resources :regions
   resources :varieties
+  
+  resources :users
 
   devise_for :users
   
-  resources :users
-  
-  devise_scope :user do
+  as :user do
     get "login", :to => "devise/sessions#new"
   end
 
@@ -41,9 +41,6 @@ Socialwino::Application.routes.draw do
       get :winemaker
     end
   end
-  
-  
-  
   
   # match 'login', :to => "user_sessions#new"
   # match 'logout', :to => "user_sessions#destroy"
