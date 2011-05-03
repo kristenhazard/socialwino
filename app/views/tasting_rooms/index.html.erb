@@ -1,4 +1,5 @@
-<h1>Listing tasting_rooms</h1>
+<h1>tasting rooms</h1>
+<div>for <%= @winery.name %></div>
 
 <table>
   <tr>
@@ -21,13 +22,13 @@
     <td><%= tasting_room.city %></td>
     <td><%= tasting_room.state %></td>
     <td><%= tasting_room.zipcode %></td>
-    <td><%= link_to 'Show', tasting_room %></td>
-    <td><%= link_to 'Edit', edit_tasting_room_path(tasting_room) %></td>
-    <td><%= link_to 'Destroy', tasting_room, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', winery_tasting_room(@winery) %></td>
+    <td><%= link_to 'Edit', edit_winery_tasting_room_path(@winery, tasting_room) %></td>
+    <td><%= link_to 'Destroy', winery_tasting_room(@winery), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Tasting room', new_tasting_room_path %>
+<%= link_to 'New Tasting room', new_winery_tasting_room_path(@winery) %>

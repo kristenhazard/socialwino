@@ -24,16 +24,20 @@
     <%= f.text_field :year %>
   </div>
   <div class="field">
-    <%= f.label :region_id %><br />
-    <%= f.text_field :region_id %>
-  </div>
-  <div class="field">
-    <%= f.label :variety_id %><br />
-    <%= f.text_field :variety_id %>
+    <%= f.label :appelation %><br />
+    <%= f.text_field :appelation %>
   </div>
 
+	<h2>varietal</h2>
+  <% f.fields_for :wine_varietals do |builder| %>
+    <%= builder.label :percentage %><br />
+    <%= builder.text_field :percentage %><br />
+    <%= builder.label :varietal_id %><br />
+    <%= builder.text_field :varietal_id %><br />
+  <% end %>
+
 	<div>
-		<p>label</p>
+		<h2>label</h2>
 		<%= f.file_field :label %>
 	</div>
 

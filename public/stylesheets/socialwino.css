@@ -109,6 +109,15 @@ ul#user-bar {
 	height: 41px;
 }
 
+#nav a {
+	font-size: 19px;
+	padding: 5px;
+}
+
+#nav li {
+	padding-top: 11px;
+}
+
 a#logo {
 	width: 205px;
 	height: 50px;
@@ -195,6 +204,16 @@ form .textfield {
 	width: 300px;
 }
 
+input[type=text] {
+	font-size: 18px;
+	border: 1px solid #dfdacb;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	width: 300px;
+}
+
 label {
 	font-size: 18px;
 }
@@ -209,6 +228,7 @@ pre {
 
 a {
 	color: #B3D18F;
+	text-decoration: none;
 }
 
 a:visited {
@@ -297,5 +317,9 @@ input[type=submit] {
 input[type=submit]:hover {
 	background: #443826;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#433726), to(#51432e));
+}
+
+table td {
+	padding: 5px;
 }
 

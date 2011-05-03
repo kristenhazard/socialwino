@@ -11,6 +11,8 @@ gem 'paperclip'
 gem 'pg'
 gem 'aws-s3'
 gem 'heroku'
+gem 'hoptoad_notifier'
+gem 'dalli'
 
 
 # Bundle gems for certain environments:

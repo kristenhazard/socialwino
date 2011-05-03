@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110425210215) do
+ActiveRecord::Schema.define(:version => 20110503190618) do
 
   create_table "histories", :force => true do |t|
     t.string   "message"
@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(:version => 20110425210215) do
     t.string   "zipcode"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "hours"
+    t.string   "phone"
+    t.string   "tasting_fee"
   end
 
   create_table "twitter_feeds", :force => true do |t|
@@ -82,9 +85,32 @@ ActiveRecord::Schema.define(:version => 20110425210215) do
     t.string   "last_sign_in_ip"
   end
 
+  create_table "varietals", :force => true do |t|
+    t.string   "name"
+    t.string   "grape"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "varieties", :force => true do |t|
     t.string   "name"
     t.string   "wine_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "wine_varietals", :force => true do |t|
+    t.integer  "wine_id"
+    t.integer  "varietal_id"
+    t.integer  "percentage"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "wine_varieties", :force => true do |t|
+    t.integer  "wine_id"
+    t.integer  "variety_id"
+    t.integer  "percentage"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -101,6 +127,11 @@ ActiveRecord::Schema.define(:version => 20110425210215) do
     t.string   "background_content_type"
     t.integer  "background_file_size"
     t.datetime "background_updated_at"
+    t.text     "description"
+    t.string   "facebook_url"
+    t.string   "website_url"
+    t.integer  "year_established"
+    t.string   "email_address"
   end
 
   create_table "wines", :force => true do |t|
@@ -119,6 +150,9 @@ ActiveRecord::Schema.define(:version => 20110425210215) do
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
     t.integer  "year"
+    t.string   "appelation"
+    t.text     "notes"
+    t.string   "summary_notes"
   end
 
 end

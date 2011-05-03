@@ -15,7 +15,6 @@ class BillboardController < ApplicationController
     end
   end
   
-  
   def update_tweets
     last_tweet_id = params[:id]
     @twitter_feed = TwitterFeed.first

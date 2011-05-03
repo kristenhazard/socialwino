@@ -2,6 +2,8 @@ class PrelaunchSignupsController < ApplicationController
   
   before_filter :authenticate_user!, :only => [:index, :destroy]
   
+  caches_page :landing
+  
   layout "prelaunch_signup"
   
   def index

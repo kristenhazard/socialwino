@@ -28,6 +28,10 @@ class WinesController < ApplicationController
   def new
     @winery = Winery.find(params[:winery_id])
     @wine = @winery.wines.build
+    
+    5.times do
+      wine_varietals = @wine.wine_varietals.build
+    end
 
     respond_to do |format|
       format.html # new.html.erb

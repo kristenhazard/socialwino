@@ -2,7 +2,8 @@ class TastingRoomsController < ApplicationController
   # GET /tasting_rooms
   # GET /tasting_rooms.xml
   def index
-    @tasting_rooms = TastingRoom.all
+    @winery = Winery.find(params[:winery_id])
+    @tasting_rooms = @winery.tasting_rooms
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,6 +14,7 @@ class TastingRoomsController < ApplicationController
   # GET /tasting_rooms/1
   # GET /tasting_rooms/1.xml
   def show
+    @winery = Winery.find(params[:winery_id])
     @tasting_room = TastingRoom.find(params[:id])
 
     respond_to do |format|
@@ -24,7 +26,8 @@ class TastingRoomsController < ApplicationController
   # GET /tasting_rooms/new
   # GET /tasting_rooms/new.xml
   def new
-    @tasting_room = TastingRoom.new
+    @winery = Winery.find(params[:winery_id])
+    @tasting_room = @winery.tasting_rooms.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +37,15 @@ class TastingRoomsController < ApplicationController
 
   # GET /tasting_rooms/1/edit
   def edit
+    @winery = Winery.find(params[:winery_id])
     @tasting_room = TastingRoom.find(params[:id])
   end
 
   # POST /tasting_rooms
   # POST /tasting_rooms.xml
   def create
-    @tasting_room = TastingRoom.new(params[:tasting_room])
+    @winery = Winery.find(params[:winery_id])
+    @tasting_room = @winery.tasting_rooms.build(params[:tasting_room])
 
     respond_to do |format|
       if @tasting_room.save
@@ -56,6 +61,7 @@ class TastingRoomsController < ApplicationController
   # PUT /tasting_rooms/1
   # PUT /tasting_rooms/1.xml
   def update
+    @winery = Winery.find(params[:winery_id])
     @tasting_room = TastingRoom.find(params[:id])
 
     respond_to do |format|
@@ -72,6 +78,7 @@ class TastingRoomsController < ApplicationController
   # DELETE /tasting_rooms/1
   # DELETE /tasting_rooms/1.xml
   def destroy
+    @winery = Winery.find(params[:winery_id])
     @tasting_room = TastingRoom.find(params[:id])
     @tasting_room.destroy
 

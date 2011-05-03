@@ -1,4 +1,4 @@
-<%= form_for(@tasting_room) do |f| %>
+<%= form_for([@winery, @tasting_room]) do |f| %>
   <% if @tasting_room.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tasting_room.errors.count, "error") %> prohibited this tasting_room from being saved:</h2>
@@ -10,11 +10,6 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :winery_id %><br />
-    <%= f.text_field :winery_id %>
-  </div>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -34,6 +29,18 @@
   <div class="field">
     <%= f.label :zipcode %><br />
     <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :hours %><br />
+    <%= f.text_field :hours %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :tasting_fee %><br />
+    <%= f.text_field :tasting_fee %>
   </div>
   <div class="actions">
     <%= f.submit %>

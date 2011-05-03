@@ -53,6 +53,7 @@ GEM
     configuration (1.2.0)
     crack (0.1.8)
     daemons (1.1.2)
+    dalli (1.0.3)
     devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 1.0.2)
@@ -66,6 +67,9 @@ GEM
     heroku (1.20.1)
       launchy (~> 0.3.2)
       rest-client (>= 1.4.0, < 1.7.0)
+    hoptoad_notifier (2.4.9)
+      activesupport
+      builder
     httparty (0.6.1)
       crack (= 0.1.8)
     i18n (0.5.0)
@@ -161,9 +165,11 @@ DEPENDENCIES
   autotest-rails
   awesome_print
   aws-s3
+  dalli
   devise
   faker
   heroku
+  hoptoad_notifier
   paperclip
   pg
   rails

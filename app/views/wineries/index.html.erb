@@ -1,18 +1,19 @@
-<h1>Listing wineries</h1>
+<h1>wineries</h1>
 
 <table>
   <tr>
-    <th></th>
+    <th>winery</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @wineries.each do |winery| %>
   <tr>
-    <td><%=h winery.name %></td>
-    <td><%= link_to 'Show', winery %></td>
-    <td><%= link_to 'Edit', edit_winery_path(winery) %></td>
-    <td><%= link_to 'Destroy', winery, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to winery.name, winery %></td>
+    <td><%= link_to 'wines', winery_wines_path(winery) %></td>
+    <td><%= link_to 'tasting rooms', winery_tasting_rooms_path(winery) %></td>
+    <td><%= link_to 'edit winery info', edit_winery_path(winery) %></td>
+    <td><%= link_to 'delete winery', winery, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
