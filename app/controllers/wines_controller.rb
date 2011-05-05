@@ -1,4 +1,7 @@
 class WinesController < ApplicationController
+  
+  before_filter :authenticate_user!
+  
   # GET /wines
   # GET /wines.xml
   def index

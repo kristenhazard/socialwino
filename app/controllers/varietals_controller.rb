@@ -1,4 +1,7 @@
 class VarietalsController < ApplicationController
+  
+  before_filter :authenticate_user!
+  
   # GET /varietals
   # GET /varietals.xml
   def index

@@ -6,7 +6,7 @@ class Wine < ActiveRecord::Base
   has_attached_file :label, 
                     :styles => { :tweet => "300x300>", :thumb => "100x100>" },
                     :storage => :s3,
-                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :s3_credentials => "#{Rails.root.to_s}/config/s3.yml",
                     :path => "wine/labels/:id/:style.:extension"
   
 end

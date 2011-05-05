@@ -18,8 +18,8 @@
     <td><%= image_tag wine.label.url(:thumb) %></td>
     <td><%= wine.year %></td>
     <td><%= wine.name %></td>
-    <td><%= wine.region_id %></td>
-    <td><%= wine.variety_id %></td>
+    <td><%= wine.appelation %></td>
+    <td><%= wine.wine_varietals.first.varietal_id %></td>
     <td><%= link_to 'show', winery_wine_path(@winery, wine) %></td>
     <td><%= link_to 'edit', edit_winery_wine_path(@winery, wine) %></td>
     <td><%= link_to 'destroy', winery_wine_path(@winery, wine), :confirm => 'Are you sure?', :method => :delete %></td>

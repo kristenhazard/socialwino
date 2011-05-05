@@ -1,4 +1,7 @@
 class TastingRoomsController < ApplicationController
+  
+  before_filter :authenticate_user!
+  
   # GET /tasting_rooms
   def index
     @winery = Winery.find(params[:winery_id])

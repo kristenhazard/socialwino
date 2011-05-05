@@ -9,7 +9,7 @@ class Winery < ActiveRecord::Base
   has_attached_file :logo, 
                     :styles => { :medium => "300x300>", :thumb => "100x100>" },
                     :storage => :s3,
-                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :s3_credentials => "#{Rails.root.to_s}/config/s3.yml",
                     :path => "winery/logos/:id/:style.:extension"
                     
   has_attached_file :background,
@@ -18,7 +18,7 @@ class Winery < ActiveRecord::Base
                                  :tv => "1920x1080>",
                                  :thumb => "100x100>" },
                     :storage => :s3,
-                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :s3_credentials => "#{Rails.root.to_s}/config/s3.yml",
                     :path => "winery/backgrounds/:id/:style.:extension"
 
 end

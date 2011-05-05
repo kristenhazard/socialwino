@@ -1,4 +1,7 @@
 class RegionsController < ApplicationController
+  
+  before_filter :authenticate_user!
+  
   # GET /regions
   # GET /regions.xml
   def index
