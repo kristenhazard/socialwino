@@ -59,7 +59,7 @@ body {
 
 body,form fieldset .field,button.swanky,.faux.field,input#short-url,#qball,#peoplesearch {
 	color: #1a1a1a;
-	font: normal normal 13px/18px "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+	font: normal normal 15px/18px "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
 	text-shadow: 0 0 1px rgba(0,0,0,0.01);
 }
 
@@ -169,6 +169,8 @@ div#content-col,div#sidebar {
 
 #content-panel h1,#neat-panel h2 {
 	text-shadow: 0 1px 0 rgba(255,255,255,1);
+	padding-top: 5px;
+	padding-bottom: 15px;
 }
 
 #content-panel h1 em,h1.mega em {
@@ -189,9 +191,30 @@ div#content-col,div#sidebar {
 
 #content-panel h2,h2.kinda-mega {
 	color: #6a5c49;
-	font-size: 14px;
+	font-size: 21px;
 	font-weight: normal;
 	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#content-panel a {
+	color: #6B533D;
+}
+
+#content-panel a:hover {
+	color: #917851;
+	background-color: transparent;
+}
+
+#content-panel textarea {
+	height: 100px;
+	font-size: 18px;
+	border: 1px solid #dfdacb;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	width: 300px;
 }
 
 form .textfield {
@@ -204,6 +227,8 @@ form .textfield {
 	width: 300px;
 }
 
+
+/*
 input[type=text] {
 	font-size: 18px;
 	border: 1px solid #dfdacb;
@@ -212,6 +237,16 @@ input[type=text] {
 	-webkit-border-radius: 3px;
 	padding: 6px;
 	width: 300px;
+}*/
+
+.textfield-small {
+	font-size: 18px;
+	border: 1px solid #dfdacb;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	width: 100px;
 }
 
 label {
@@ -323,3 +358,33 @@ table td {
 	padding: 5px;
 }
 
+/*select {
+	-webkit-appearance: menulist;
+	-webkit-box-align: center;
+	-webkit-box-sizing: border-box;
+	-webkit-rtl-ordering: logical;
+	background-color: white;
+	border-bottom-left-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border: 1px solid;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+	color: black;
+	cursor: default;
+	white-space: pre;
+}*/
+
+select  {
+  outline: 0;
+  overflow: hidden;
+  height: 30px;
+  background: #FBFCF3;
+  color:#747a80;
+  border:#2c343c ;
+  padding:5px 3px 5px 10px;
+  -moz-border-radius:6px;
+ -webkit-border-radius:6px;
+ border-radius:10px;
+}
+
+select option {border:1px solid #000; background:#010;}

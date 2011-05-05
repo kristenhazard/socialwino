@@ -12,35 +12,35 @@
   <% end %>
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "textfield" %>
   </div>
   <div class="field">
     <%= f.label :address %><br />
-    <%= f.text_field :address %>
+    <%= f.text_field :address, :class => "textfield" %>
   </div>
   <div class="field">
     <%= f.label :city %><br />
-    <%= f.text_field :city %>
+    <%= f.text_field :city, :class => "textfield" %>
   </div>
   <div class="field">
     <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    <%= f.text_field :state, :class => "textfield" %>
   </div>
   <div class="field">
     <%= f.label :zipcode %><br />
-    <%= f.text_field :zipcode %>
+    <%= f.text_field :zipcode, :class => "textfield" %>
   </div>
   <div class="field">
     <%= f.label :hours %><br />
-    <%= f.text_field :hours %>
+    <%= f.text_area :hours, :class => "textarea" %>
   </div>
   <div class="field">
     <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
+    <%= f.text_field :phone, :class => "textfield" %>
   </div>
   <div class="field">
     <%= f.label :tasting_fee %><br />
-    <%= f.text_field :tasting_fee %>
+    <%= f.text_area :tasting_fee, :class => "textarea" %>
   </div>
   <div class="actions">
     <%= f.submit %>

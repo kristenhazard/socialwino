@@ -1,6 +1,5 @@
 class TastingRoomsController < ApplicationController
   # GET /tasting_rooms
-  # GET /tasting_rooms.xml
   def index
     @winery = Winery.find(params[:winery_id])
     @tasting_rooms = @winery.tasting_rooms
@@ -12,7 +11,6 @@ class TastingRoomsController < ApplicationController
   end
 
   # GET /tasting_rooms/1
-  # GET /tasting_rooms/1.xml
   def show
     @winery = Winery.find(params[:winery_id])
     @tasting_room = TastingRoom.find(params[:id])
@@ -24,7 +22,6 @@ class TastingRoomsController < ApplicationController
   end
 
   # GET /tasting_rooms/new
-  # GET /tasting_rooms/new.xml
   def new
     @winery = Winery.find(params[:winery_id])
     @tasting_room = @winery.tasting_rooms.build
@@ -42,14 +39,13 @@ class TastingRoomsController < ApplicationController
   end
 
   # POST /tasting_rooms
-  # POST /tasting_rooms.xml
   def create
     @winery = Winery.find(params[:winery_id])
     @tasting_room = @winery.tasting_rooms.build(params[:tasting_room])
 
     respond_to do |format|
       if @tasting_room.save
-        format.html { redirect_to(@tasting_room, :notice => 'Tasting room was successfully created.') }
+        format.html { redirect_to(winery_tasting_rooms_path(@winery), :notice => 'Tasting room was successfully created.') }
         format.xml  { render :xml => @tasting_room, :status => :created, :location => @tasting_room }
       else
         format.html { render :action => "new" }
@@ -59,14 +55,13 @@ class TastingRoomsController < ApplicationController
   end
 
   # PUT /tasting_rooms/1
-  # PUT /tasting_rooms/1.xml
   def update
     @winery = Winery.find(params[:winery_id])
     @tasting_room = TastingRoom.find(params[:id])
 
     respond_to do |format|
       if @tasting_room.update_attributes(params[:tasting_room])
-        format.html { redirect_to(@tasting_room, :notice => 'Tasting room was successfully updated.') }
+        format.html { redirect_to(winery_tasting_rooms_path(@winery), :notice => 'Tasting room was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -76,14 +71,13 @@ class TastingRoomsController < ApplicationController
   end
 
   # DELETE /tasting_rooms/1
-  # DELETE /tasting_rooms/1.xml
   def destroy
     @winery = Winery.find(params[:winery_id])
     @tasting_room = TastingRoom.find(params[:id])
     @tasting_room.destroy
 
     respond_to do |format|
-      format.html { redirect_to(tasting_rooms_url) }
+      format.html { redirect_to(winery_tasting_rooms_url(@winery)) }
       format.xml  { head :ok }
     end
   end

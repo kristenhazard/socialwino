@@ -1,4 +1,6 @@
-<h1>editing winery</h1>
+<h1>edit winery
+<%= link_to "tasting rooms", winery_tasting_rooms_path(@winery) %>
+<%= link_to "wines", winery_wines_path(@winery) %></h1>
 
 <%= render 'form' %>
 

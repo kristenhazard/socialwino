@@ -1,6 +1,7 @@
-<p id="notice"><%= notice %></p>
-
+<h1>tasting room</h1>
 <div>for <%= @winery.name %></div>
+
+<p id="notice"><%= notice %></p>
 
 <p>
   <b>Name:</b>
@@ -28,5 +29,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_tasting_room_path(@tasting_room) %> |
-<%= link_to 'Back', tasting_rooms_path %>
+<%= link_to 'Edit', edit_winery_tasting_room_path(@winery, @tasting_room) %> |
+<%= link_to 'Back', winery_tasting_rooms_path(@winery) %>

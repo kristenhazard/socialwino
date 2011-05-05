@@ -14,7 +14,7 @@ Socialwino::Application.routes.draw do
   get "twitter/finalize"
 
   resources :regions
-  resources :varieties
+  resources :varietals
   
   namespace :user do
     root :to => "wineries#index"

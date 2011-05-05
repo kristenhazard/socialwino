@@ -1,0 +1,25 @@
+<%= form_for(@varietal) do |f| %>
+  <% if @varietal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@varietal.errors.count, "error") %> prohibited this varietal from being saved:</h2>
+
+      <ul>
+      <% @varietal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :class => "textfield" %>
+  </div>
+  <div class="field">
+    <%= f.label :grape %><br />
+    <%= f.text_field :grape, :class => "textfield" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
 <%= form_for [@winery, @wine], :html => { :multipart => true } do |f| %>
+
   <% if @wine.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@wine.errors.count, "error") %> prohibited this wine from being saved:</h2>
@@ -17,25 +18,27 @@
   </div> -->
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "textfield" %>
   </div>
   <div class="field">
     <%= f.label :year %><br />
-    <%= f.text_field :year %>
+    <%= f.text_field :year, :class => "textfield" %>
   </div>
   <div class="field">
     <%= f.label :appelation %><br />
-    <%= f.text_field :appelation %>
+    <%= f.text_field :appelation, :class => "textfield" %>
   </div>
 
+	<div id="w-varietals">
 	<h2>varietal</h2>
   <% f.fields_for :wine_varietals do |builder| %>
-    <%= builder.label :percentage %><br />
-    <%= builder.text_field :percentage %><br />
-    <%= builder.label :varietal_id %><br />
-    <%= builder.text_field :varietal_id %><br />
+    <%= builder.label :percentage %>
+    <%= builder.text_field :percentage, :class => "textfield-small" %>
+		<%= builder.collection_select(:varietal_id, Varietal.all, :id, :name, :prompt => "select varietal") %>
+		<br/>
   <% end %>
-
+	</div>
+	
 	<div>
 		<h2>label</h2>
 		<%= f.file_field :label %>
@@ -44,4 +47,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+	<%= debug @wine.to_yaml %>
 <% end %>

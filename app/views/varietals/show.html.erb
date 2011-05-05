@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @varietal.name %>
+</p>
+
+<p>
+  <b>Grape:</b>
+  <%= @varietal.grape %>
+</p>
+
+
+<%= link_to 'Edit', edit_varietal_path(@varietal) %> |
+<%= link_to 'Back', varietals_path %>

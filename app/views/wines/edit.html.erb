@@ -1,7 +1,7 @@
-<h1>Editing wine</h1>
+<h1>edit wine</h1>
 <div>for <%= @winery.name %></div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', winery_wine_path(@winery, @wine) %> |
-<%= link_to 'Back', winery_wines_path(@winery) %>
+<%= link_to 'show', winery_wine_path(@winery, @wine) %> |
+<%= link_to 'back', winery_wines_path(@winery) %>

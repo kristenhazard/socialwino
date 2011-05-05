@@ -1,23 +1,47 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
+<h1><%= @winery.name %></h1>
+
+<p><%= auto_link(@winery.description) %></p>
+<p><%= auto_link(@winery.website_url) %></p>
+<p><%= auto_link(@winery.facebook_url) %></p>
+<p><%= auto_link(@winery.email_address) %></p>
+
+<h2>logo</h2>
 <p><%= image_tag @winery.logo.url(:thumb) %></p>
-<p><%= @winery.name %></p>
-<div>
-<% for twitter_feed in @winery.twitter_feeds %>
-  <p>
-    screen name: <%=h twitter_feed.screen_name %>
-    <%= link_to image_tag("/images/twitter_connect.png"), twitter_authorize_path(twitter_feed.screen_name) %>
-  </p>
-  <p>
-    auth token: <%=h twitter_feed.auth_token %>
-  </p>
-  <p>
-    secret: <%=h twitter_feed.auth_secret %>
-  </p>
-<% end %>
+
+<h2>wines</h2>
+<div id="w-wines">
+	<% for wine in @winery.wines %>
+		<%= image_tag wine.label.url(:thumb) %>
+	<% end %>
 </div>
 
-<p><%= image_tag @winery.background.url(:thumb) %></p>
+<h2>tasting rooms</h2>
+<div id="w-tasting-rooms">
+	<% for tasting_room in @winery.tasting_rooms %>
+		<%= tasting_room.address %>
+	<% end %>
+</div>
 
+
+<div>
+	<h2>twitter</h2>
+	<% for twitter_feed in @winery.twitter_feeds %>
+	  <p>
+	    screen name: <%=h twitter_feed.screen_name %>
+	    <%= link_to image_tag("/images/twitter_connect.png"), twitter_authorize_path(twitter_feed.screen_name) %>
+	  </p>
+	  <p>
+	    auth token: <%=h twitter_feed.auth_token %>
+	  </p>
+	  <p>
+	    secret: <%=h twitter_feed.auth_secret %>
+	  </p>
+	<% end %>
+</div>
+
+<h2>background image</h2>
+<p><%= image_tag @winery.background.url(:thumb) %></p>
 <%= link_to 'Edit', edit_winery_path(@winery) %> |
 <%= link_to 'Back', wineries_path %>

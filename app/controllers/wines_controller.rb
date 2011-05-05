@@ -43,6 +43,9 @@ class WinesController < ApplicationController
   def edit
     @winery = Winery.find(params[:winery_id])
     @wine = Wine.find(params[:id])
+    5.times do
+      wine_varietals = @wine.wine_varietals.build
+    end
   end
 
   # POST /wines

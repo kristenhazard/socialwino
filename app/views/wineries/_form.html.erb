@@ -13,7 +13,7 @@
   
   <p>
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "textfield" %>
   </p>
 
 	<div>
@@ -23,39 +23,41 @@
 
 	<div>
 		<%= f.label :website_url %><br />
-    <%= f.text_field :website_url %>
+    <%= f.text_field :website_url, :class => "textfield" %>
 	</div>
 	
 	<div>
 		<%= f.label :facebook_url %><br />
-    <%= f.text_field :facebook_url %>
+    <%= f.text_field :facebook_url, :class => "textfield" %>
 	</div>
 
 	<div>
 		<%= f.label :year_established %><br />
-    <%= f.text_field :year_established %>
+    <%= f.text_field :year_established, :class => "textfield" %>
 	</div>
 
 	<div>
 		<%= f.label :email_address %><br />
-    <%= f.text_field :email_address %>
+    <%= f.text_field :email_address, :class => "textfield" %>
 	</div>
 	
 	<h2>twitter</h2>
   <% f.fields_for :twitter_feeds do |builder| %>
     <%= builder.label :screen_name %><br />
-    <%= builder.text_field :screen_name %><br />
+    <%= builder.text_field :screen_name, :class => "textfield" %><br />
   <% end %>
 
 
 
 	<div>
 		<h2>logo</h2>
+		<%= image_tag @winery.logo.url(:thumb) %>
 		<%= f.file_field :logo %>
 	</div>
 	
 	<div>
 		<h2>background image</h2>
+		<%= image_tag @winery.background.url(:thumb) %>
 		<%= f.file_field :background %>
 	</div>
 

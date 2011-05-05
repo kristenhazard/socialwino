@@ -1,4 +1,4 @@
-<h1>Listing wines</h1>
+<h1>wines</h1>
 <div>for <%= @winery.name %></div>
 
 <table>
@@ -20,13 +20,13 @@
     <td><%= wine.name %></td>
     <td><%= wine.region_id %></td>
     <td><%= wine.variety_id %></td>
-    <td><%= link_to 'Show', winery_wine_path(@winery, wine) %></td>
-    <td><%= link_to 'Edit', edit_winery_wine_path(@winery, wine) %></td>
-    <td><%= link_to 'Destroy', winery_wine_path(@winery, wine), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'show', winery_wine_path(@winery, wine) %></td>
+    <td><%= link_to 'edit', edit_winery_wine_path(@winery, wine) %></td>
+    <td><%= link_to 'destroy', winery_wine_path(@winery, wine), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Wine', new_winery_wine_path(@winery) %>
+<%= link_to 'add wine', new_winery_wine_path(@winery) %>
