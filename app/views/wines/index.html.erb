@@ -1,32 +1,5 @@
 <h1>wines</h1>
-<div>for <%= @winery.name %></div>
+<%= render :partial => "shared/winery_link", :locals => { :winery => @winery } %>
 
-<table>
-  <tr>
-    <th>Label</th>
-    <th>Year</th>
-    <th>Wine</th>
-    <th>Region</th>
-    <th>Varietal</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= render :partial => "shared/wine_listing", :object => @wines, :as => :wines, :locals => { :winery => @winery }  %>
 
-<% @wines.each do |wine| %>
-  <tr>
-    <td><%= image_tag wine.label.url(:thumb) %></td>
-    <td><%= wine.year %></td>
-    <td><%= wine.name %></td>
-    <td><%= wine.appelation %></td>
-    <td><%= wine.varietals.first.name %></td>
-    <td><%= link_to 'show', winery_wine_path(@winery, wine) %></td>
-    <td><%= link_to 'edit', edit_winery_wine_path(@winery, wine) %></td>
-    <td><%= link_to 'destroy', winery_wine_path(@winery, wine), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'add wine', new_winery_wine_path(@winery) %>

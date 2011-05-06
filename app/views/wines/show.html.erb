@@ -1,5 +1,5 @@
 
-<div>for <%= @winery.name %></div>
+<%= render :partial => "shared/winery_link", :locals => { :winery => @winery } %>
 
 <p id="notice"><%= notice %></p>
 

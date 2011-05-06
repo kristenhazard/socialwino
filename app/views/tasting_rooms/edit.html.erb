@@ -1,5 +1,5 @@
 <h1>edit tasting_room</h1>
-<div>for <%= @winery.name %></div>
+<%= render :partial => "shared/winery_link", :locals => { :winery => @winery } %>
 
 <%= render 'form' %>
 

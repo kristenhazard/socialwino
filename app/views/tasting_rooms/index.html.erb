@@ -1,32 +1,4 @@
 <h1>tasting rooms</h1>
-<div>for <%= @winery.name %></div>
+<%= render :partial => "shared/winery_link", :locals => { :winery => @winery } %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Zipcode</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @tasting_rooms.each do |tasting_room| %>
-  <tr>
-    <td><%= tasting_room.name %></td>
-    <td><%= tasting_room.address %></td>
-    <td><%= tasting_room.city %></td>
-    <td><%= tasting_room.state %></td>
-    <td><%= tasting_room.zipcode %></td>
-    <td><%= link_to 'show', winery_tasting_room_path(@winery, tasting_room) %></td>
-    <td><%= link_to 'edit', edit_winery_tasting_room_path(@winery, tasting_room) %></td>
-    <td><%= link_to 'destroy', winery_tasting_room_path(@winery, tasting_room), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'add a tasting room', new_winery_tasting_room_path(@winery) %>
+<%= render :partial => "shared/tasting_rooms", :object => @tasting_rooms, :as => :tasting_rooms, :locals => { :winery => @winery }  %>

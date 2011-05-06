@@ -12,16 +12,12 @@
 
 <h2>wines</h2>
 <div id="w-wines">
-	<% for wine in @winery.wines %>
-		<%= image_tag wine.label.url(:thumb) %>
-	<% end %>
+	<%= render :partial => "shared/wine_listing", :object => @winery.wines, :as => :wines, :locals => { :winery => @winery }  %>
 </div>
 
 <h2>tasting rooms</h2>
 <div id="w-tasting-rooms">
-	<% for tasting_room in @winery.tasting_rooms %>
-		<%= tasting_room.address %>
-	<% end %>
+	<%= render :partial => "shared/tasting_rooms", :object => @winery.tasting_rooms, :as => :tasting_rooms, :locals => { :winery => @winery }  %>
 </div>
 
 
