@@ -4,20 +4,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Region:</b>
-  <%= @wine.region_id %>
-</p>
-
-<p>
-  <b>Variety:</b>
-  <%= @wine.variety_id %>
+  <b>Year:</b>
+  <%= @wine.year %>
 </p>
 
 <p>
   <b>Name:</b>
   <%= @wine.name %>
 </p>
+<p>
+  <b>Appelation:</b>
+  <%= @wine.appelation %>
+</p>
 
-
+<% @wine.wine_varietals.each do |wv| %>
+	<%= wv.percentage %> % <%= wv.varietal.name %><br/>
+<% end %>
+<br/>
 <%= link_to 'Edit', edit_winery_wine_path(@winery, @wine) %> |
 <%= link_to 'Back', winery_wines_path(@winery) %>

@@ -34,7 +34,8 @@
   <% f.fields_for :wine_varietals do |builder| %>
     <%= builder.label :percentage %>
     <%= builder.text_field :percentage, :class => "textfield-small" %>
-		<%= builder.collection_select(:varietal_id, Varietal.all, :id, :name, :prompt => "select varietal") %>
+		<%= builder.collection_select(:varietal_id, Varietal.order("name"), :id, :name, :prompt => "select varietal") %>
+		<%= link_to "add varietal", new_varietal_path %>
 		<br/>
   <% end %>
 	</div>
