@@ -1,6 +1,8 @@
 class Wine < ActiveRecord::Base
   belongs_to :winery
+  
   has_many :wine_varietals
+  has_many :varietals, :through => :wine_varietals
   accepts_nested_attributes_for :wine_varietals, :reject_if => lambda { |a| a[:percentage].blank? }, :allow_destroy => true
   
   has_attached_file :label, 
