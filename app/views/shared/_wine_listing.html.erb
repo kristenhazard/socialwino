@@ -1,31 +1,33 @@
 <div class="wine-listing">
-	<div><%= link_to 'add wine', new_winery_wine_path(winery) %></div>
-	<% unless wines.blank? %>
-		<table>
-		  <tr>
-		    <th>Label</th>
-		    <th>Year</th>
-		    <th>Wine</th>
-		    <th>Region</th>
-		    <th>Varietal</th>
-		    <th></th>
-		    <th></th>
-		    <th></th>
-		  </tr>
+<div><%= link_to 'add wine', new_winery_wine_path(winery) %></div>
 
-		<% wines.each do |wine| %>
-		  <tr>
-		    <td><%= image_tag wine.label.url(:thumb) %></td>
-		    <td><%= wine.year %></td>
-		    <td><%= wine.name %></td>
-		    <td><%= wine.appelation %></td>
-		    <td><%= wine.varietals.first.name %></td>
-		    <td><%= link_to 'show', winery_wine_path(winery, wine) %></td>
-		    <td><%= link_to 'edit', edit_winery_wine_path(winery, wine) %></td>
-		    <td><%= link_to 'destroy', winery_wine_path(winery, wine), :confirm => 'Are you sure?', :method => :delete %></td>
-		  </tr>
-		<% end %>
-		</table>
-	<% end %>
+<table>
+  <tr>
+    <th>Label</th>
+    <th>Year</th>
+    <th>Wine</th>
+    <th>Region</th>
+    <th>Varietal</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% wines.each do |wine| %>
+  <tr>
+    <td><%= image_tag wine.label.url(:thumb) %></td>
+    <td><%= wine.year %></td>
+    <td><%= wine.name %></td>
+    <td><%= wine.appelation %></td>
+    <td>
+			<%= wine.varietals.first.name unless wine.varietals.blank? %>
+		</td>
+    <td><%= link_to 'show', winery_wine_path(winery, wine) %></td>
+    <td><%= link_to 'edit', edit_winery_wine_path(winery, wine) %></td>
+    <td><%= link_to 'destroy', winery_wine_path(winery, wine), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+</table>
 </div>
 
