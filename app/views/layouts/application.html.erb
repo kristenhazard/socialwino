@@ -19,6 +19,18 @@
     })();
 
   </script>
+
+	<script type="text/javascript">
+	  var _kmq = _kmq || [];
+	  function _kms(u){
+	    setTimeout(function(){
+	      var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
+	      s.src = u; f.parentNode.insertBefore(s, f);
+	    }, 1);
+	  }
+	  _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/063423375b0e007f7479336abc9847ce8c9c0dd4.1.js');
+	</script>
+
 </head>
 <body>
   <div id="wrapper">
@@ -29,7 +41,6 @@
          <% if current_user %>
             <li><%= link_to current_user.username, edit_user_path(current_user) %></li>
 						<li><%= link_to "billboard", billboard_path %></li>
-						<li><%= link_to "demo", billboard_demo_path %></li>
             <li><%= link_to "LOGOUT", destroy_user_session_path %></li>
           <% else %>
             <li><%= link_to "SIGN UP", new_user_registration_path %></li>

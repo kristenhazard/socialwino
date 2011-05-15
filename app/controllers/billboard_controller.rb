@@ -3,10 +3,13 @@ class BillboardController < ApplicationController
   layout "billboard"
   
   def index
-    @twitter_feed = TwitterFeed.first
-    client = @twitter_feed.client
-    @tweets = client.home_timeline
-    @last_tweet_id = @tweets.first.id
+    # @winery_id = params[:id]
+    # @twitter_feed = TwitterFeed.find_by_winery_id(@winery_id)
+    # logger.debug "@twitter_feed=#{@twitter_feed}"
+    # @twitter_feed = TwitterFeed.first if @twitter_feed.nil?
+    # client = @twitter_feed.client
+    # @tweets = client.home_timeline
+    # @last_tweet_id = @tweets.first.id
         
     respond_to do |format|
       format.html
@@ -29,9 +32,13 @@ class BillboardController < ApplicationController
   end
   
   def initialize_tweets
-    @twitter_feed = TwitterFeed.first
+    @winery_id = params[:id]
+    @twitter_feed = TwitterFeed.find_by_winery_id(@winery_id)
+    logger.debug "@twitter_feed=#{@twitter_feed}"
+    @twitter_feed = TwitterFeed.first if @twitter_feed.nil?
     client = @twitter_feed.client
     @tweets = client.home_timeline(:count => 15)
+    # @tweets = client.user_timeline(:count => 15)
     @last_tweet_id = @tweets.first.id
     
     respond_to do |format|

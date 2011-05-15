@@ -24,14 +24,16 @@ Socialwino::Application.routes.draw do
   
   # match '/user' => 'users#index'
   
+  get "wineries/:id/billboard" => "billboard#index"
+  
   get "billboard/index"
   match "billboard", :to => "billboard#index"
-  get "billboard/show_demo"
-  match "billboard/demo", :to => "billboard#show_demo"
-  get "billboard/update_tweets"
-  match "billboard/update/:id", :to => "billboard#update_tweets"
-  get "billboard/initialize_tweets"
-  get "billboard/new_tweets"
+  # get "billboard/show_demo"
+  # match "billboard/demo", :to => "billboard#show_demo"
+  # get "billboard/update_tweets"
+  # match "billboard/update/:id", :to => "billboard#update_tweets"
+  get "wineries/:id/billboard/initialize_tweets" => "billboard#initialize_tweets"
+  # get "billboard/new_tweets"
 
   # resources :user_sessions
   resources :prelaunch_signups do

@@ -9,6 +9,30 @@
 	<%= stylesheet_link_tag "appcss/app.css" %>
 	<%= javascript_include_tag 'jquery/jquery-1.4.2.min.js', 'app/jsoop.js','app/winetweets.js', 'app/main.js', 'app/tweets.js' %>
 	<%= hoptoad_javascript_notifier %>
+	  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9553779-6']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+	<script type="text/javascript">
+	  var _kmq = _kmq || [];
+	  function _kms(u){
+	    setTimeout(function(){
+	      var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
+	      s.src = u; f.parentNode.insertBefore(s, f);
+	    }, 1);
+	  }
+	  _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/063423375b0e007f7479336abc9847ce8c9c0dd4.1.js');
+	</script>
 	<!-- 
 	<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jsoop.js" type="text/javascript" charset="utf-8"></script>

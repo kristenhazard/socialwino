@@ -19,13 +19,17 @@ class TwitterController < ApplicationController
     oauth.authorize_from_request(session[:request_token], session[:request_secret], params[:oauth_verifier])
     
     @profile = Twitter::Base.new(oauth).verify_credentials
+    
+    logger.debug @profile.screen_name
+    
     session[:request_token]
     session[:request_secret]
     
     session[:auth_token] = oauth.access_token.token
     session[:auth_secret] = oauth.access_token.secret
     
-    twitter_feed = TwitterFeed.find_by_screen_name(@profile.screen_name)
+    # twitter_feed = TwitterFeed.find_by_screen_name(@profile.screen_name)
+    twitter_feed = TwitterFeed.find(:first, :conditions => [ "lower(screen_name) = ?", @profile.screen_name.downcase ])
     
     twitter_feed.update_attributes({
       :auth_token => oauth.access_token.token, 
