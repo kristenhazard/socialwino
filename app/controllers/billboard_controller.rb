@@ -3,7 +3,10 @@ class BillboardController < ApplicationController
   layout "billboard"
   
   def index
-    # @winery_id = params[:id]
+    @winery_id = params[:id]
+    if @winery_id.blank?
+      @winery_id = 1
+    end
     # @twitter_feed = TwitterFeed.find_by_winery_id(@winery_id)
     # logger.debug "@twitter_feed=#{@twitter_feed}"
     # @twitter_feed = TwitterFeed.first if @twitter_feed.nil?

@@ -49,7 +49,8 @@ var Tweets = Class.extend ({
   
   fetchMoreTweets: function (callback) {
     var that = this;
-    $.getJSON("/wineries/1/billboard/initialize_tweets.json", function(data, status) {
+		var winery_id = $('body').attr('data-winery');
+    $.getJSON("/wineries/" + winery_id + "/billboard/initialize_tweets.json", function(data, status) {
         console.log ("JSON fetched from server, status: " + status + " nr = " + data.length);
 
         that.tweets = data.concat(that.tweets);

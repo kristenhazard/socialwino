@@ -13,6 +13,7 @@ gem 'aws-s3'
 gem 'heroku'
 gem 'hoptoad_notifier'
 gem 'dalli'
+gem 'facebooker2'
 
 
 # Bundle gems for certain environments:

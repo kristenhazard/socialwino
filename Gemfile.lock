@@ -61,6 +61,9 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     eventmachine (0.12.10)
+    facebooker2 (0.0.11)
+      mogli (>= 0.0.12)
+      ruby-hmac
     faker (0.9.5)
       i18n (~> 0.4)
     hashie (0.4.0)
@@ -83,6 +86,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mogli (0.0.28)
+      httparty (>= 0.4.3)
     multi_json (0.0.5)
     oauth (0.4.3)
     paperclip (2.3.11)
@@ -124,6 +129,7 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.3.0)
+    ruby-hmac (0.4.0)
     sequel (3.17.0)
     simple_oauth (0.1.4)
     sinatra (1.0)
@@ -167,6 +173,7 @@ DEPENDENCIES
   aws-s3
   dalli
   devise
+  facebooker2
   faker
   heroku
   hoptoad_notifier
